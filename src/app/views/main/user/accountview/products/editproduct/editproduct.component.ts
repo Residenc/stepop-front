@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Location} from '@angular/common';
+import { Location } from '@angular/common';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Producto, ProductosService } from 'src/app/services/productos/productos.service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -31,6 +31,7 @@ export class EditproductComponent implements OnInit {
   constructor(
                 private productoServices:ProductosService,
                 private router:Router,
+                private location: Location,
                 private activeRoute:ActivatedRoute
                 ) { 
   }
@@ -60,6 +61,10 @@ export class EditproductComponent implements OnInit {
       console.log(err)
     }
     )
+  }
+
+  back(): void {
+    this.location.back()
   }
   
  

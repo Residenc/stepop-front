@@ -1,5 +1,5 @@
 <div class="container shadow rounded-3 p-3 p-md-5 my-md-5 my-4" style="background-color: rgb(255,255,255);">
-    <h2 class="display-6 mb-5">Lista De Productos</h2>
+    <h2 class="display-6 mb-5">Editar Producto</h2>
     <div class="row d-flex justify-content-center align-items-center">
         <div class="col-auto p-2 img-thumbnail rounded bg-light me-5">
             <div class="profile-photo position-relative">
@@ -14,40 +14,54 @@
                 <img src="../../../../../assets/images/58.jpg" class="img-fluid" alt="Foto De Perfil" width="300" height="300">
             </div>
         </div>
-        <form [formGroup]="modifyForm">
-
-        <div class="col-12 col-lg-7">
+        <form [formGroup]="modifyForm" class="col-12 col-lg-7">
             <div class="mb-4 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
                 <label  class="col-12 col-md-3 col-lg-2 col-form-label product-label">Nombre:</label>
                 <div class="col-12 col-md-6 col-lg-8">
-                <input [(ngModel)]="usuario.nombre" type="text" class="form-control product-campo"  formControlName="nombre">
+                    <input [(ngModel)]="usuario.nombre" type="text" class="form-control product-campo" formControlName="nombre" placeholder="Tela, Playera, Audifonos, Gas">
                 </div>
             </div>
             <div class="mb-4 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
-                <label for="product-price" class="col-12 col-md-3 col-lg-2 col-form-label product-label">Precio:</label>
+                <label  class="col-12 col-md-3 col-lg-2 col-form-label product-label">Descripcion:</label>
                 <div class="col-12 col-md-6 col-lg-8">
-                <input [(ngModel)]="usuario.precio" type="int" class="form-control product-campo"  formControlName="precio">
+                    <textarea [(ngModel)]="usuario.descripcion" type="text" formControlName="descripcion" class="form-control" placeholder="Breve descripcion y caracteristicas del producto" style="height: 100px"></textarea>
                 </div>
+                <!--
+                <label for="product-model" class="col-12 col-md-3 col-lg-2 col-form-label product-label">Descripcion:</label>
+                <div class="col-12 col-md-6 col-lg-8">
+                    <input [(ngModel)]="usuario.descripcion" type="text" class="form-control product-campo"  formControlName="descripcion">
+                </div>
+                -->
             </div>
             <div class="mb-4 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
                 <label for="product-category" class="col-12 col-md-3 col-lg-2 col-form-label product-label">Categoria:</label>
                 <div class="col-12 col-md-6 col-lg-8">
-                  <input type="text" [(ngModel)]="usuario.tipo" class="form-control" formControlName="tipo">  
+                <input type="text" [(ngModel)]="usuario.tipo" class="form-control" formControlName="tipo">  
+                </div>
+            </div>
+            <div class="mb-4 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
+                <label for="product-price" class="col-12 col-md-3 col-lg-2 col-form-label product-label">Precio:</label>
+                <div class="col-12 col-md-6 col-lg-4">
+                <input [(ngModel)]="usuario.precio" type="number" class="form-control product-campo"  formControlName="precio">
                 </div>
             </div>
             <div class="mb-4 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
                 <label for="product-marca" class="col-12 col-md-3 col-lg-2 col-form-label product-label">Stock:</label>
-                <div class="col-12 col-md-6 col-lg-8">
-                <input [(ngModel)]="usuario.stock" type="text" class="form-control product-campo" formControlName="stock" >
+                <div class="col-12 col-md-6 col-lg-4">
+                <input [(ngModel)]="usuario.stock" type="number" class="form-control product-campo" formControlName="stock" >
                 </div>
             </div>
-            <div class="mb-4 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
-                <label for="product-model" class="col-12 col-md-3 col-lg-2 col-form-label product-label">Descripcion:</label>
-                <div class="col-12 col-md-6 col-lg-8">
-                <input [(ngModel)]="usuario.descripcion" type="text" class="form-control product-campo"  formControlName="descripcion">
-                </div>
+            <div class="mb-4 mt-4 mt-lg-0 d-flex justify-content-center align-items-center actions">
+                <button type="button" class="btn btn-secondary me-3" (click)="back()">Cancelar</button>
+                <button (click)="modificar()" class="btn btn-primary">Guardar</button>
             </div>
-            <div><button (click)="modificar()" class="btn btn-primary">Guardar</button></div>
+        </form>
+    </div>
+</div>
+
+
+
+
             <!--<div class="mb-4 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
                 <label for="product-stock" class="col-12 col-md-3 col-lg-2 col-form-label product-label">Stock:</label>
                 <div class="col-12 col-md-6 col-lg-8">
@@ -89,8 +103,3 @@
                 <button type="submit" class="btn btn-success w-100 d-block d-md-none" (click)="back()">Editar</button>
                 <button type="submit" class="btn btn-success d-none d-md-block" (click)="back()">Editar</button>
             </div>-->
-        </div>
-        </form>
-
-    </div>
-</div>
