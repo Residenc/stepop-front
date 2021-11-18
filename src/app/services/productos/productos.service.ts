@@ -7,6 +7,19 @@ import { Injectable } from '@angular/core';
 export class ProductosService {
   url='http://localhost:3000';
   constructor(private http: HttpClient) { }
+    //get listarproyser
+    getlistarproyser(){
+      return this.http.get(this.url + '/listarproyser');
+    }
+    //get lsista servicio
+    getlistaservicio(){
+      return this.http.get(this.url +'/listaservi');
+    }
+  
+    //get lsista producto
+    getlistaproduc(){
+      return this.http.get(this.url +'/listaproduc');
+    }
 
   //get productos
   getProductos(){
@@ -36,4 +49,6 @@ tipo?:string | any;
 stock?:string | any;
 descripcion?: string | any;
 id_usuario?: string | any;
+id_empresa?: string | any;
+nombre_empresa?:string|any;
     }
