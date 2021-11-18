@@ -1,0 +1,65 @@
+<div class="offcanvas offcanvas-end" id="cart-offcanvas" aria-labelledby="cartOffcanvasLabel" tabindex="-1">
+    <div class="offcanvas-header border border-1">
+        <h5 id="cartOffcanvasLabel" class="mx-auto">Tu Carrito <span class="badge rounded-pill fw-bold">(4)</span></h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="cart-product-wrapper">
+            <div class="cart-product p-4">
+                <div class="d-flex align-items center">
+                    <a routerLink="/viewproduct" data-bs-dismiss="offcanvas">
+                        <img src="https://picsum.photos/80/100" alt="" class="rounded img-fluid cart-product-image">
+                    </a>
+                    <div class="w-100">
+                        <a href="#" class="btn-close close text-sm me-2 rounded-circle border border-2 p-2" aria-label="Close"></a>
+                        <div class="ps-3">
+                            <a class="cart-product-link" routerLink="/viewproduct" data-bs-dismiss="offcanvas">Nombre Del Producto</a>
+                            <small class="text-muted d-block">Cantidad: 1</small>
+                            <strong>$100.00</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-product p-4">
+                <div class="d-flex align-items center">
+                    <a routerLink="/viewproduct" data-bs-dismiss="offcanvas">
+                        <img src="https://picsum.photos/80/100" alt="" class="rounded img-fluid cart-product-image">
+                    </a>
+                    <div class="w-100">
+                        <a href="#" class="btn-close close text-sm me-2 rounded-circle border border-2 p-2" aria-label="Close"></a>
+                        <div class="ps-3">
+                            <a class="cart-product-link" routerLink="/viewproduct" data-bs-dismiss="offcanvas">Nombre Del Producto</a>
+                            <small class="text-muted d-block">Cantidad: 1</small>
+                            <strong>$115.00</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-product p-4">
+                <div class="d-flex align-items center">
+                    <a routerLink="/viewproduct" data-bs-dismiss="offcanvas">
+                        <img src="https://picsum.photos/80/100" alt="" class="rounded img-fluid cart-product-image">
+                    </a>
+                    <div class="w-100">
+                        <a href="#" class="btn-close close text-sm me-2 rounded-circle border border-2 p-2" aria-label="Close"></a>
+                        <div class="ps-3">
+                            <a class="cart-product-link" routerLink="/viewproduct" data-bs-dismiss="offcanvas">Nombre Del Producto</a>
+                            <small class="text-muted d-block">Cantidad: 2</small>
+                            <strong>$30.00</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-total">
+            <span class="text-uppercase text-muted">Subtotal</span>
+            <strong class="text-uppercase">$275.00</strong>
+        </div>
+        <div class="paygroup row p-5">
+            <div class="col-12">
+                <a href="" class="btn btn-outline-dark d-block mb-3" routerLink="/viewcart" data-bs-dismiss="offcanvas">Ver Carrito<i class="bi bi-arrow-bar-right fw-bold"></i></a>
+                <a href="" class="btn btn-purple d-block" routerLink="/checkout" data-bs-dismiss="offcanvas">Checkout</a>
+            </div>
+        </div>
+    </div>
+</div>

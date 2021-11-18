@@ -1,0 +1,17 @@
+.btn-edit{
+    background: none;
+    border: none;
+    padding: 0;
+    i{
+        transition: all .3s ease-in-out;
+        &:hover {
+            color: rgb(150,150,150);
+        }
+    }
+}
+.btn-success{
+    &:focus {
+        border-color: rgb(200,200,200);
+        box-shadow: 0 0 15px 0 rgba(60, 60, 60, 0.5);
+    }
+}

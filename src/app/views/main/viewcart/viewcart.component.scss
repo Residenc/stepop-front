@@ -1,0 +1,31 @@
+.cart-product-wrapper{
+    overflow-y: auto;
+    .cart-product{
+        border-bottom: 1px solid rgb(220,220,220);
+    }
+}
+
+
+.cart-product-text{
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+    color: #343a40;
+}
+
+
+.cantidadNumber{
+    width: 80px;
+    &:focus {
+        border-color: rgb(200,200,200);
+        box-shadow: 0 0 15px 0 rgba(60, 60, 60, 0.5);
+    }
+}
+
+.btn-drop {
+    width: 80px;
+    &:focus {
+        border-color: rgb(200,200,200);
+        box-shadow: 0 0 15px 0 rgba(60, 60, 60, 0.5);
+    }
+}

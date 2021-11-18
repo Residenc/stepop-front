@@ -1,0 +1,33 @@
+<div class="perfil-tab">
+
+    <ul class="nav nav-tabs tab-edit" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/accountview/profile/editprofile']" [routerLinkActive]="'active'">
+                <i class="d-inline bi bi-person-circle me-2"></i>
+                <p class="d-none d-md-inline">Perfil</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/accountview/profile/editaddress']" [routerLinkActive]="'active'">
+                <i class="d-inline bi bi-compass me-2"></i>
+                <p class="d-none d-md-inline">Direcciones</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/accountview/profile/editpays']" [routerLinkActive]="'active'">
+                <i class="d-inline bi bi-credit-card-2-front me-2"></i>
+                <p class="d-none d-md-inline">Metodos De Pago</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/accountview/profile/editsuscription']" [routerLinkActive]="'active'">
+                <i class="d-inline bi bi-star me-2"></i>
+                <p class="d-none d-md-inline">Suscripción</p>
+            </a>
+        </li>
+    </ul>
+
+    <div class="tab-content-edit mt-5">
+        <router-outlet></router-outlet>
+    </div>
+</div>

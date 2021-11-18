@@ -1,0 +1,71 @@
+.home-tab{
+    .profile-photo{
+        .profile-button{
+            .btn-photo-icon {
+                width: 3rem;
+                height: 3rem;
+                padding: 0 !important;
+                border: 0;
+                border-radius: 10%;
+                background-color: rgba(0, 0, 0, 0.5);
+                color: rgb(201, 201, 201);
+                font-size: 25px;
+                &:focus {
+                    border-color: rgba(200, 200, 200, 0);
+                    box-shadow: 0 0 15px 0 rgba(60, 60, 60, 0.5);
+                }
+            }
+            .btn-photo-text {
+                padding: 5px;
+                background-color: rgba(0, 0, 0, 0.5);
+                color: rgb(255,255,255);
+                font-size: 15px;
+                font-weight:600;
+                &:focus {
+                    border-color: rgba(200, 200, 200, 0);
+                    box-shadow: 0 0 15px 0 rgba(60, 60, 60, 0.5);
+                }
+            }
+        }
+        
+    }
+    .user-label{
+        font-size: 18px;
+        font-weight: 700;
+    }
+    .user-campo{
+        background: none;
+        padding: 10px;
+        text-align: center;
+        font-size: 15px;
+        &:focus {
+            border-color: rgb(200,200,200);
+            box-shadow: 0 0 15px 0 rgba(60, 60, 60, 0.5);
+        }
+    }
+    .form-floating{
+        .campo-floating{
+            padding-left: 30px;
+            padding-top: 50px;
+            padding-bottom: 5px;
+            a{
+                text-decoration: none;
+                color: rgb(100,100,100);
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+            .more-link{
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+        .labelfloating{
+            font-size: 18px;
+            font-weight: 700;
+            padding-left: 30px;
+        }
+    }
+    
+}

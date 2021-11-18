@@ -1,0 +1,120 @@
+.product-card{
+    border: 0;
+    padding: 0;
+    transition: all .15s ease-in-out;
+    &:hover{
+        box-shadow: 0 5rem 1.5rem 0.1rem rgba(rgb(0,0,0), .09);
+        z-index: 10;
+        .product-card-actions .btn-action {
+          opacity: 1;
+          visibility: visible;
+          border: none;
+        }
+        .card-body-hidden {
+          opacity: 1;
+          visibility: visible;
+        }
+    }
+    .card-img-top{
+        text-align: center;
+        img{
+            width: 80%;
+            max-height: 200px;
+        }
+    }
+
+    .product-card-actions{
+        .btn-wishlist {
+            width: 2.75rem;
+            height: 2.75rem;
+            padding: 0 !important;
+            transition: all .25s ease-in-out,background-color .25s ease-in-out,border-color .25s ease-in-out,box-shadow .2s ease-in-out;
+            border: 0;
+            border-radius: 50%;
+            background-color: rgb(245, 245, 245);
+            color: rgb(255, 0, 0);
+            text-align: center;
+            font-size: 25px;
+            &:hover{
+                background-color: rgb(230,230,230);
+                font-size: 30px;
+            }
+        }
+    }
+    .product-subcategory{
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: block;
+        overflow: hidden;
+        transition: color .25s ease-in-out;
+        color: #7d879c;
+        font-size: 0.75rem !important;
+        text-decoration: none !important;
+    }
+    .product-title > a{
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: block;
+        overflow: hidden;
+        font-size: 0.85rem !important;
+        transition: color .25s ease-in-out;
+        color: #373f50;
+        text-decoration: none !important;
+        font-weight: 700;
+        &:hover{
+            color: #9100d4;
+            text-decoration: none;
+        }
+    }
+    .product-price{
+        span, small{
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            color: #373f50;
+        }
+    }
+    .star-rating{
+        display: inline-block;
+        white-space: nowrap;
+        line-height: 1;
+        vertical-align: middle;
+        .star-rating-icon {
+            display: inline-block;
+            margin-right: .1875rem;
+            color: #aeb4be;
+            font-size: .75rem;
+            vertical-align: middle;
+        }
+        .star-rating-icon.active{
+            color: #fea569;
+        }
+    }
+    .card-body-hidden {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        margin-top: -1.25rem;
+        transition: all .15s ease-in-out;
+        border-radius: .4375rem;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1;
+        .btn-vista{
+            font-size: 0.8125rem !important;
+            color: #4b566b;
+            text-decoration: none;
+        }
+    }
+}
+
+.btn-outline-secondary{
+    &:focus {
+        border-color: rgb(200,200,200);
+        box-shadow: 0 0 15px 0 rgba(60, 60, 60, 0.5);
+    }
+}

@@ -1,0 +1,33 @@
+.productos-tab{
+    .listaProductos{
+        .listaProducto{
+            background: rgb(206, 187, 218);
+            .descripcionProducto{
+                .img-product{
+                    max-width: 104px;
+                    max-height: 104px;
+                }
+            }
+            .actionsgroup{
+                .icon-edit{
+                    color: rgb(0, 0, 0);
+                }
+                .icon-drop{
+                    color: rgb(255, 50, 50);
+                }
+            }
+            &:nth-child(odd){
+                background: rgb(96, 0, 156);
+                color: rgb(255,255,255);
+                .descripcionProducto{
+                    strong, small{
+                        color: rgb(255,255,255) !important;
+                    }
+                }
+                .icon-edit{
+                    color: rgb(232, 232, 232) !important;
+                }
+            }
+        }
+    }
+}

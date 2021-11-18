@@ -1,0 +1,96 @@
+<div class="container shadow rounded-3 p-3 p-md-5 my-md-5 my-4" style="background-color: rgb(255,255,255);">
+    <h2 class="display-6 mb-5">Lista De Productos</h2>
+    <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-auto p-2 img-thumbnail rounded bg-light me-5">
+            <div class="profile-photo position-relative">
+                <div class="profile-button position-absolute top-0 end-0 d-md-none d-block">
+                    <input type="file" id="selectedFile" style="display: none;" />
+                    <button type="button" class="btn btn-photo-icon" onclick="document.getElementById('selectedFile').click();" data-bs-toggle="tooltip" data-bs-placement="top" title="Cambiar Foto De Perfil"><i class="bi bi-pencil-square"></i></button>
+                </div>
+                <div class="profile-button position-absolute bottom-0 start-50 translate-middle-x d-md-block d-none">
+                    <input type="file" id="selectedFile" style="display: none;" />
+                    <button type="button" class="btn btn-photo-text" onclick="document.getElementById('selectedFile').click();">Imagen Del Producto</button>
+                </div>
+                <img src="../../../../../assets/images/58.jpg" class="img-fluid" alt="Foto De Perfil" width="300" height="300">
+            </div>
+        </div>
+        <form [formGroup]="modifyForm">
+
+        <div class="col-12 col-lg-7">
+            <div class="mb-4 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
+                <label  class="col-12 col-md-3 col-lg-2 col-form-label product-label">Nombre:</label>
+                <div class="col-12 col-md-6 col-lg-8">
+                <input [(ngModel)]="usuario.nombre" type="text" class="form-control product-campo"  formControlName="nombre">
+                </div>
+            </div>
+            <div class="mb-4 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
+                <label for="product-price" class="col-12 col-md-3 col-lg-2 col-form-label product-label">Precio:</label>
+                <div class="col-12 col-md-6 col-lg-8">
+                <input [(ngModel)]="usuario.precio" type="int" class="form-control product-campo"  formControlName="precio">
+                </div>
+            </div>
+            <div class="mb-4 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
+                <label for="product-category" class="col-12 col-md-3 col-lg-2 col-form-label product-label">Categoria:</label>
+                <div class="col-12 col-md-6 col-lg-8">
+                  <input type="text" [(ngModel)]="usuario.tipo" class="form-control" formControlName="tipo">  
+                </div>
+            </div>
+            <div class="mb-4 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
+                <label for="product-marca" class="col-12 col-md-3 col-lg-2 col-form-label product-label">Stock:</label>
+                <div class="col-12 col-md-6 col-lg-8">
+                <input [(ngModel)]="usuario.stock" type="text" class="form-control product-campo" formControlName="stock" >
+                </div>
+            </div>
+            <div class="mb-4 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
+                <label for="product-model" class="col-12 col-md-3 col-lg-2 col-form-label product-label">Descripcion:</label>
+                <div class="col-12 col-md-6 col-lg-8">
+                <input [(ngModel)]="usuario.descripcion" type="text" class="form-control product-campo"  formControlName="descripcion">
+                </div>
+            </div>
+            <div><button (click)="modificar()" class="btn btn-primary">Guardar</button></div>
+            <!--<div class="mb-4 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
+                <label for="product-stock" class="col-12 col-md-3 col-lg-2 col-form-label product-label">Stock:</label>
+                <div class="col-12 col-md-6 col-lg-8">
+                <input type="number" class="form-control product-campo" id="product-stock" value="5">
+                </div>
+            </div>
+            <div class="mb-4 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
+                <div class="col-12 col-md-9 col-lg-10">
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Breve descripcion y caracteristicas del producto" id="floatingTextarea2" style="height: 100px"></textarea>
+                        <label for="floatingTextarea2" class="ps-4">Descripción:</label>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-4 mt-4 mt-lg-0 d-flex justify-content-center align-items-center colorselector">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input red" type="radio" name="inlineRadioOptions" value="rojo">
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input green" type="radio" name="inlineRadioOptions" value="verde">
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input yellow" type="radio" name="inlineRadioOptions" value="amarillo">
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input blue" type="radio" name="inlineRadioOptions" value="azul">
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input gray" type="radio" name="inlineRadioOptions" value="gris">
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input white" type="radio" name="inlineRadioOptions" value="blanco">
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input black" type="radio" name="inlineRadioOptions" value="negro">
+                </div>
+            </div>
+            <div class="mb-4 mt-4 mt-lg-0 d-flex justify-content-center align-items-center">
+                <button type="submit" class="btn btn-success w-100 d-block d-md-none" (click)="back()">Editar</button>
+                <button type="submit" class="btn btn-success d-none d-md-block" (click)="back()">Editar</button>
+            </div>-->
+        </div>
+        </form>
+
+    </div>
+</div>

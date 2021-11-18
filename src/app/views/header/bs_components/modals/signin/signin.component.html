@@ -1,0 +1,79 @@
+<div class="modal fade" id="signin-modal" tabindex="-1" aria-labelledby="signinModal-Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="min-height: 500px;">
+            <div class="modal-header" style="background-color: #f1f2f3;">
+                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                    <li class="nav-item">
+                        <a href="#signin-tab" class="nav-link active" data-bs-toggle="tab" role="tab" aria-selected="true">
+                            <i class="d-inline bi bi-door-open me-2 mt-n1"></i>
+                            <p class="d-none d-md-inline">Iniciar Sesion</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#signup-tab" class="nav-link" data-bs-toggle="tab" role="tab" aria-selected="true">
+                            <i class="d-inline bi bi-clipboard me-2 mt-n1"></i>
+                            <p class="d-none d-md-inline">Registrarse</p>
+                        </a>
+                    </li>
+                </ul>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body tab-content d-flex justify-content-center align-items-center">
+                <form [formGroup]="authForm" id="signin-tab" class="tab-pane fade show active flex-fill px-5" (ngSubmit)="onSubmit()">
+
+                    <div class="mb-3">
+                        <label class="form-label" for="emailUser">Correo Electronico</label>
+                        <input class="form-control" type="email" id="emailUser" placeholder="email@ejemplo.com" formControlName="email">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="passwdUser">Contraseña</label>
+                        <input class="form-control" type="password" id="passwdUser" formControlName="password">
+                    </div>
+
+                    <div class="mb-3 d-flex flex-wrap justify-content-between">
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="rememberUser">
+                            <label for="rememberUser" class="form-check-label">Recuerdame</label>
+                        </div>
+                        <a class="fs-6 text-decoration-none" href="#" style="color: royalblue; font-weight: 500;">Olvidaste Tu Contraseña?</a>
+                    </div>
+
+                    <button type="submit" data-bs-dismiss="modal" class="btn btn-primary shadow-sm d-block w-75 mx-auto">Iniciar Sesion</button>
+
+                </form>
+
+                <form [formGroup]="registerForm" id="signup-tab" class="tab-pane fade flex-fill px-5" (ngSubmit)="onRegister()">
+
+                    <div class="mb-3" >
+                        <label class="form-label" for="fnameUser">Nombre</label>
+                        <input class="form-control" type="text" id="fnameUser"  formControlName="nombre" placeholder="Nombre(s)">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="fnameUser">Apellidos</label>
+                        <input class="form-control" type="text" id="apellidos" placeholder="Apellidos" formControlName="apellidos">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label" for="remailUser">Correo Electronico</label>
+                        <input class="form-control" type="email" id="remailUser" placeholder="correo@ejemplo.com" formControlName="email">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="rpasswdUser">Contraseña</label>
+                        <input class="form-control" type="password" id="rpasswdUser" formControlName="password">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="rpasswdUserConf">Confirmar Contraseña</label>
+                        <input class="form-control" type="password" id="rpasswdUserConf">
+                    </div>
+
+                    <button type="submit" data-bs-dismiss="modal" class="btn btn-purple shadow-sm d-block w-75 mx-auto">Registrate</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

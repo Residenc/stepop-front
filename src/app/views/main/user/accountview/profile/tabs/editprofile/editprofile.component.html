@@ -1,0 +1,44 @@
+<div class="animate__animated animate__zoomIn animate__faster">
+    <div class="d-flex justify-content-end">
+        <button (click)="enabledBtn()" type="button" class="btn-edit" id="btn-edit" onclick="disabledRemove()" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar Perfil"><i class="bi bi-pencil-square fs-3"></i></button>
+    </div>
+    <form class="row d-flex justify-content-center align-items-center mb-3 mb-lg-5">
+        <div class="col-12">
+            <div class="mb-3 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
+                <label for="edit-name" class="col-12 col-md-2 col-form-label user-label-edit">Nombre:</label>
+                <div class="col-12 col-md-6">
+                  <input type="text" class="form-control user-campo-edit" id="edit-name" #editName value="Yorman Jesus Rojas Martinez" disabled>
+                </div>
+            </div>
+            <div class="mb-5 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
+                <label for="edit-email" class="col-12 col-md-2 col-form-label user-label-edit">Email:</label>
+                <div class="col-12 col-md-6">
+                  <input type="email" class="form-control user-campo-edit" id="edit-email" #editEmail value="l161080213@iztapalapa.tecnm.mx" disabled>
+                </div>
+            </div>
+            <div class="mb-3 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
+                <label for="user-passwd" class="col-12 col-md-2 col-form-label user-label-edit">Contraseña Actual:</label>
+                <div class="col-12 col-md-6">
+                  <input type="password" class="form-control user-campo-edit" id="user-passwd" #editPasswd1 disabled>
+                </div>
+            </div>
+            <div class="mb-5 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
+                <label for="edit-passwd" class="col-12 col-md-2 col-form-label user-label-edit">Contraseña Nueva:</label>
+                <div class="col-12 col-md-6">
+                  <input type="password" class="form-control user-campo-edit" id="edit-passwd" #editPasswd2 disabled>
+                </div>
+            </div>
+            <div class="mb-5 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
+                <label for="edit-phone" class="col-12 col-md-2 col-form-label user-label-edit">Telefono:</label>
+                <div class="col-12 col-md-6">
+                  <input type="text" class="form-control user-campo-edit" id="edit-phone" value="5584126053" #editPhone disabled>
+                </div>
+            </div>
+            <div class="mb-3 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
+                <div class="col-12 col-md-auto">
+                    <button type="submit" (click)="disabledBtn()" class="btn btn-success w-100" #editButton disabled>Editar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

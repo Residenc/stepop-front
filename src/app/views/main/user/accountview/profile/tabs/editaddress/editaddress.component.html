@@ -1,0 +1,131 @@
+<div class="animate__animated animate__zoomIn animate__faster">
+    <div class="container">
+        <div class="row d-flex justify-content-center align-items-center mb-5">
+            <div class="col">
+                <h4 class="fw-normal mb-4">Agregar Direccion</h4>
+                <form class="row mb-4">
+                    
+                    <div class="row mb-0 mb-xl-4">
+                        <div class="col-12 col-md-6 col-xl-8 mb-3 mb-xl-0">
+                            <input type="text" class="form-control" id="calle" placeholder="Calle">
+                        </div>
+        
+                        <div class="col-6 col-md-3 col-xl-2 mb-3 mb-xl-0">
+                            <input type="text" class="form-control" id="numeroext" placeholder="Numero Exterior">
+                        </div>
+        
+                        <div class="col-6 col-md-3 col-xl-2 mb-3 mb-xl-0">
+                            <input type="text" class="form-control" id="numeroint" placeholder="Numero Interior">
+                        </div>
+                    </div>
+                    <div class="row mb-0 mb-xl-4">
+                        <div class="col-12 col-md-5 mb-3 mb-xl-0">
+                            <input type="text" class="form-control" id="calle2" placeholder="Entre Calle">
+                        </div>
+        
+                        <div class="col-12 col-md-5 mb-3 mb-xl-0">
+                            <input type="text" class="form-control" id="calle3" placeholder="Y Calle">
+                        </div>
+        
+                        <div class="col-12 col-md-2 mb-3 mb-xl-0">
+                            <input type="text" class="form-control" id="codigopostal" placeholder="Codigo Postal">
+                        </div>
+                    </div>
+                    <div class="row mb-0 mb-xl-4">
+                        <div class="col-12 col-md-6 col-xl-4 mb-3 mb-xl-0">
+                            <select name="edo" id="edo" class="form-select d-block w-100">
+                                <option value="">Seleccionar Estado o Entidad</option>
+                                <option value="cdmx">Ciudad De México</option>
+                                <option value="toluca">Toluca</option>
+                                <option value="cuernavaca">Cuernavaca</option>
+                            </select>
+                        </div>
+        
+                        <div class="col-12 col-md-6 col-xl-4 mb-3 mb-xl-0">
+                            <select name="local" id="localidad" class="form-select d-block w-100">
+                                <option value="">Seleccionar Municipio o Alcaldia</option>
+                            </select>
+                        </div>
+        
+                        <div class="col-12 col-md-6 col-xl-4 mb-3 mb-xl-0">
+                            <select name="local" id="colonia" class="form-select d-block w-100">
+                                <option value="">Seleccionar Colonia</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-3 mb-xl-0 justify-content-between align-items-center">
+                        <div class="col-12 col-md-auto mb-3 mb-md-0">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="infoEnvio">
+                                <label class="form-check-label" for="infoEnvio">Direccion Predeterminada</label>
+                              </div>
+                        </div>
+                        <div class="col-12 col-md-auto">
+                            <input type="submit" class="btn btn-purple w-100" value="Guardar">
+                        </div>
+                    </div>
+                
+                </form>
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col">
+                <h4 class="fw-normal mb-4">Direcciones Guardadas</h4>
+
+
+                <div class="list-group px-5">
+                    <a href="#" class="list-group-item list-group-item-action active">
+                        <h6>Direccion Predeterminada</h6>
+
+                        <div class="ubicacionsave d-flex align-items-center p-2">
+                            <div class="icon-save">
+                                <i class="bi bi-geo-alt d-inline me-5 fw-light"></i>
+                            </div>
+                            <div class="info-save">
+                                <p class="d-inline fw-light" style="text-align: justify;">Gral Agustin Olachea Aviles X - Ernesto X. Sanchez Y Jose Galvez Hernandez - Fachada Morada Saguan Blanco - Adolfo Gonzales Ramirez - Venustiano Carranza, CDMX Yorman Jesus Rojas Martinez - 5544878142</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <h6>Direccion #1</h6>
+
+                        <div class="ubicacionsave d-flex align-items-center p-2">
+                            <div class="icon-save">
+                                <i class="bi bi-geo-alt d-inline me-5 fw-light"></i>
+                            </div>
+                            <div class="info-save">
+                                <p class="d-inline fw-light" style="text-align: justify;">Gral Agustin Olachea Aviles X - Ernesto X. Sanchez Y Jose Galvez Hernandez - Fachada Morada Saguan Blanco - Adolfo Gonzales Ramirez - Venustiano Carranza, CDMX Yorman Jesus Rojas Martinez - 5544878142</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <h6>Direccion #2</h6>
+
+                        <div class="ubicacionsave d-flex align-items-center p-2">
+                            <div class="icon-save">
+                                <i class="bi bi-geo-alt d-inline me-5 fw-light"></i>
+                            </div>
+                            <div class="info-save">
+                                <p class="d-inline fw-light" style="text-align: justify;">Gral Agustin Olachea Aviles X - Ernesto X. Sanchez Y Jose Galvez Hernandez - Fachada Morada Saguan Blanco - Adolfo Gonzales Ramirez - Venustiano Carranza, CDMX Yorman Jesus Rojas Martinez - 5544878142</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <h6>Direccion #3</h6>
+
+                        <div class="ubicacionsave d-flex align-items-center p-2">
+                            <div class="icon-save">
+                                <i class="bi bi-geo-alt d-inline me-5 fw-light"></i>
+                            </div>
+                            <div class="info-save">
+                                <p class="d-inline fw-light" style="text-align: justify;">Gral Agustin Olachea Aviles X - Ernesto X. Sanchez Y Jose Galvez Hernandez - Fachada Morada Saguan Blanco - Adolfo Gonzales Ramirez - Venustiano Carranza, CDMX Yorman Jesus Rojas Martinez - 5544878142</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

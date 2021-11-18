@@ -1,0 +1,222 @@
+<div class="container shadow p-4 p-md-5 my-5 rounded-3" style="background-color: rgb(255,255,255);">
+    <h2 class="display-4 text-center mb-3">Termina Tu Proceso De Registro</h2>
+    <form class="border-top border-1">
+
+        <div class="row mb-4 mt-5">
+            <div class="row mb-2">
+                <h4 class="display-6">Datos Personales</h4>
+            </div>
+            <div class="row mb-0 mb-xl-3">
+                <div class="col-12 col-xl-3 col-md-6 mb-3 mb-xl-0">
+                    <input type="text" class="form-control" id="nombres" placeholder="Nombre(s)">
+                </div>
+
+                <div class="col-12 col-xl-3 col-md-6 mb-3 mb-xl-0">
+                    <input type="text" class="form-control" id="apellidop" placeholder="Apellido Paterno">
+                </div>
+
+                <div class="col-12 col-xl-3 col-md-6 mb-3 mb-xl-0">
+                    <input type="text" class="form-control" id="apellidom" placeholder="Apellido Materno">
+                </div>
+
+                <div class="col-12 col-xl-3 col-md-6 mb-3 mb-xl-0 text-center align-self-center">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sexo" id="opmasculino" value="option1" checked>
+                        <label class="form-check-label" for="opmasculino">Masculino</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sexo" id="opfemenino" value="option2">
+                        <label class="form-check-label" for="opfemenino">Femenino</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-0 mb-xl-3">
+                <div class="col-12 col-xl-6 mb-3 mb-xl-0">
+                    <div class="row g-0">
+                        <div class="col-4">
+                            <label for="fechanacim" class="col-form-label">Fecha De Nacimiento</label>
+                        </div>
+                        <div class="col">
+                          <input type="date" class="form-control" id="fechanacim">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-xl-3 col-md-6 mb-3 mb-xl-0">
+                    <input type="text" class="form-control" id="telefonof" placeholder="Telefono Fijo (10 Digitos)">
+                </div>
+
+                <div class="col-12 col-xl-3 col-md-6 mb-3 mb-xl-0">
+                    <input type="text" class="form-control" id="telefonoc" placeholder="Telefono Celular (10 Digitos)">
+                </div>
+
+            </div>
+            <div class="row">        
+                <div class="col-12 col-xl-6 mb-3 mb-xl-0">
+                    <input type="email" class="form-control" id="correo" placeholder="Correo Electronico">
+                </div>
+                <div class="col-12 col-xl-3 col-md-6 mb-3 mb-xl-0">
+                    <input type="email" class="form-control" id="passwd1" placeholder="Contraseña">
+                </div>
+                <div class="col-12 col-xl-3 col-md-6 mb-3 mb-xl-0">
+                    <input type="email" class="form-control" id="passwd2" placeholder="Confirmar Contraseña">
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+
+            <div class="row mb-2">
+                <h4 class="display-6">Domicilio</h4>
+            </div>
+            <div class="row mb-0 mb-xl-3">
+                <div class="col-12 col-md-6 col-xl-8 mb-3 mb-xl-0">
+                    <input type="text" class="form-control" id="calle" placeholder="Calle">
+                </div>
+
+                <div class="col-6 col-md-3 col-xl-2 mb-3 mb-xl-0">
+                    <input type="text" class="form-control" id="numeroext" placeholder="Numero Exterior">
+                </div>
+
+                <div class="col-6 col-md-3 col-xl-2 mb-3 mb-xl-0">
+                    <input type="text" class="form-control" id="numeroint" placeholder="Numero Interior">
+                </div>
+            </div>
+            <div class="row mb-0 mb-xl-3">
+                <div class="col-12 col-md-5 mb-3 mb-xl-0">
+                    <input type="text" class="form-control" id="calle2" placeholder="Entre Calle">
+                </div>
+
+                <div class="col-12 col-md-5 mb-3 mb-xl-0">
+                    <input type="text" class="form-control" id="calle2" placeholder="Y Calle">
+                </div>
+
+                <div class="col-12 col-md-2 mb-3 mb-xl-0">
+                    <input type="text" class="form-control" id="codigopostal" placeholder="Codigo Postal">
+                </div>
+            </div>
+            <div class="row mb-0 mb-xl-3">
+                <div class="col-12 col-md-6 col-xl-4 mb-3 mb-xl-0">
+                    <select name="edo" id="edo" class="form-select d-block w-100">
+                        <option value="">Seleccionar Estado o Entidad</option>
+                        <option value="cdmx">Ciudad De México</option>
+                        <option value="toluca">Toluca</option>
+                        <option value="cuernavaca">Cuernavaca</option>
+                    </select>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-4 mb-3 mb-xl-0">
+                    <select name="local" id="local" class="form-select d-block w-100">
+                        <option value="">Seleccionar Municipio o Alcaldia</option>
+                    </select>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-4 mb-3 mb-xl-0">
+                    <select name="local" id="local" class="form-select d-block w-100">
+                        <option value="">Seleccionar Colonia</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-0 mb-xl-3 justify-content-end align-items-center">
+                <div class="col-auto">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="infoEnvio">
+                        <label class="form-check-label" for="infoEnvio">Usar Informacion Para Proximos Envios</label>
+                      </div>
+                </div>
+            </div>
+        
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-12 col-md-6 col-xl-4 mb-3 mb-xl-0">
+                <div class="row text-center mb-2">
+                    <h4 class="display-6">Tipo De Cuenta</h4>
+                </div>
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-auto">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="tipoCuenta" id="grat" value="option1" checked>
+                            <label class="form-check-label" for="grat">Usuario Gratis</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="tipoCuenta" id="suscr" value="option2">
+                            <label class="form-check-label" for="suscr">Empresa</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 mb-3 mb-xl-0">
+                <div class="row mb-2">
+                    <h4 class="text-center display-6">Metodo De Pago</h4>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="row d-flex justify-content-center align-items-center mb-3">
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="tipoPago" id="paypal" value="option1" disabled>
+                                    <label class="form-check-label" for="paypal">Paypal</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="tipoPago" id="debito" value="option2" checked>
+                                    <label class="form-check-label" for="paypal">Tarjeta De Debito</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="tipoPago" id="credito" value="option3">
+                                    <label class="form-check-label" for="paypal">Tarjeta De Credito</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control mb-3" id="numTarjeta" placeholder="Nombre En La Tarjeta">
+                                <input type="text" class="form-control mb-3" id="numTarjeta" placeholder="Numero En La Tarjeta">
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control mb-3" id="añoTarjeta" placeholder="MM/YY">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" id="ccvTarjeta" placeholder="CCV">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4 mb-3 mb-xl-0">
+                <div class="row text-center mb-2">
+                    <h4 class="display-6">Tiempo De Suscripcion</h4>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        <select name="edo" id="edo" class="form-select d-block">
+                            <option value="">Seleccionar Tiempo</option>
+                            <option value="cdmx">1 Mes</option>
+                            <option value="toluca">3 Meses</option>
+                            <option value="cuernavaca">6 Meses</option>
+                            <option value="cuernavaca">1 Año</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mb-4 justify-content-center align-items-center">
+            <div class="col-auto">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="terminosCondiciones">
+                    <label class="form-check-label" for="terminosCondiciones">Acepto <a href="#" style="text-decoration: none;">Terminos</a> y <a href="#" style="text-decoration: none;">Condiciones</a></label>
+              </div>
+            </div>
+        </div>
+    </form>
+    <div class="row justify-content-center align-items-center">
+        <div class="col-auto">
+            <input type="submit" class="btn btn-purple" routerLink="/accountview" value="Registrarse">
+        </div>
+    </div>
+</div>

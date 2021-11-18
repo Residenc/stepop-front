@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background: #ebebeb;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+/*body > app-root > app-header > header > ul > li.nav-item.dropdown > ul{
+    inset: auto auto auto 0px !important;
+}*/
+
+.bg-dark {
+    background-color: rgb(10, 10, 10)!important;
+}
+
+.btn-purple{
+    background: rgb(177, 17, 252);
+    color: rgb(255, 255, 255);
+    &:hover{
+        background: rgb(159, 17, 224);
+        color: rgb(255, 255, 255);
+    }
+    &:focus {
+        border-color: rgb(200,200,200);
+        box-shadow: 0 0 15px 0 rgba(60, 60, 60, 0.5);
+    }
+}
+
+.form-control, select, .form-check-input{
+    &:focus {
+        border-color: rgb(200,200,200);
+        box-shadow: 0 0 15px 0 rgba(60, 60, 60, 0.5);
+    }
+    &:checked {
+        border: none;
+        background-color: rgb(103, 22, 168);
+    }
+} 
+/* Importing Bootstrap SCSS file. */
+//@import '~bootstrap/scss/bootstrap';

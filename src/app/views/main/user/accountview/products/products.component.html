@@ -1,0 +1,207 @@
+<div class="productos-tab animate__animated animate__zoomIn animate__faster">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="display-6">Lista De Productos</h2>
+                <hr class="mb-4">   
+
+                <table class="table table-striped table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">precio</th>
+                        <th scope="col">tipo</th>
+                        <th scope="col">stock</th>
+                        <th scope="col">descripcion</th>
+                        <th scope="col">id_usuario</th>
+                        <th scope="col"> Editar</th>
+                        <th scope="col">Eliminar</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let usuario of ListarProducto">
+                        <th>{{usuario.id_produc}}</th>
+                        <td>{{usuario.nombre}}</td>
+                        <td>{{usuario.precio}}</td>
+                        <td>{{usuario.tipo}}</td>
+                        <td>{{usuario.stock}}</td>
+                        <td>{{usuario.descripcion}}</td>
+                        <td>{{usuario.id_usuario}}</td>
+                        <td>
+                            <button [routerLink]="['/editproduct',usuario.id_produc]" type="button" class="btn btn-primary"> <a><i class="bi bi-pencil-square fs-3"></i></a>   </button>
+                        </td>
+                        <td>
+                            <button [routerLink]="['/editproduct',usuario.id_produc]" type="button" class="btn btn-primary"> <a><i class="bi bi-pencil-square fs-3"></i></a>   </button>
+                            <!--<button type="button" class="btn icon-drop" onclick="document.getElementById('dropbutton').click();"><i class="bi bi-trash fs-3"></i></button>-->
+                        </td>
+                        <!-- <td>
+                          <button [routerLink]="['/editar',usuario.id_usuario]" type="button" class="btn btn-primary">Editar</button>
+                        </td>
+                        <td>
+                          <button  (click)="eliminar(usuario.id_usuario)"type="button" class="btn btn-danger">Eliminar</button>
+                        </td>-->
+                        
+                      </tr>
+                    </tbody>
+                  </table>
+
+
+
+
+
+<!--
+                <ol class="list-group list-group-numbered listaProductos pt-4">
+                    <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-4 listaProducto">
+                        <a class="ms-4 me-auto descripcionProducto d-flex align-items-center text-decoration-none text-black" routerLink="/viewproduct">
+                            z<div class="d-inline">
+                                <img class="img-fluid img-product img-thumbnail" src="../../../../assets/images/58.jpg" alt="Product">
+                            </div>
+                            <div class="d-inline ms-4">
+                                <strong class="d-block mb-1">Nombre Del Producto</strong>
+                                <small class="d-block">Categoria</small>
+                            </div>
+                        </a>
+                      
+                        <div class="actionsgroup">
+                            <a class="btn icon-edit" routerLink="/editproduct"><i class="bi bi-pencil-square fs-3"></i></a>
+
+                            <input type="submit" id="dropbutton" style="display: none;"/>
+                            <button type="button" class="btn icon-drop" onclick="document.getElementById('dropbutton').click();"><i class="bi bi-trash fs-3"></i></button>
+                        </div>
+                    </li>  
+                    
+                    
+
+
+                    <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-4 listaProducto">
+                        <a class="ms-4 me-auto descripcionProducto d-flex align-items-center text-decoration-none text-black" routerLink="/viewproduct">
+                            <div class="d-inline">
+                                <img class="img-fluid img-product img-thumbnail" src="../../../../assets/images/59.jpg" alt="Product">
+                            </div>
+                            <div class="d-inline ms-4">
+                                <strong class="d-block mb-1">Nombre Del Producto</strong>
+                                <small class="d-block">Categoria</small>
+                            </div>
+                        </a>
+                      
+                        <div class="actionsgroup">
+                            <a class="btn icon-edit" routerLink="/editproduct"><i class="bi bi-pencil-square fs-3"></i></a>
+
+                            <input type="submit" id="dropbutton" style="display: none;"/>
+                            <button type="button" class="btn icon-drop" onclick="document.getElementById('dropbutton').click();"><i class="bi bi-trash fs-3"></i></button>
+                        </div>
+                    </li>
+                    <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-4 listaProducto">
+                        <a class="ms-4 me-auto descripcionProducto d-flex align-items-center text-decoration-none text-black" routerLink="/viewproduct">
+                            <div class="d-inline">
+                                <img class="img-fluid img-product img-thumbnail" src="../../../../assets/images/60.jpg" alt="Product">
+                            </div>
+                            <div class="d-inline ms-4">
+                                <strong class="d-block mb-1">Nombre Del Producto</strong>
+                                <small class="d-block">Categoria</small>
+                            </div>
+                        </a>
+                      
+                        <div class="actionsgroup">
+                            <a class="btn icon-edit" routerLink="/editproduct"><i class="bi bi-pencil-square fs-3"></i></a>
+
+                            <input type="submit" id="dropbutton" style="display: none;"/>
+                            <button type="button" class="btn icon-drop" onclick="document.getElementById('dropbutton').click();"><i class="bi bi-trash fs-3"></i></button>
+                        </div>
+                    </li>
+                    <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-4 listaProducto">
+                        <a class="ms-4 me-auto descripcionProducto d-flex align-items-center text-decoration-none text-black" routerLink="/viewproduct">
+                            <div class="d-inline">
+                                <img class="img-fluid img-product img-thumbnail" src="../../../../assets/images/61.jpg" alt="Product">
+                            </div>
+                            <div class="d-inline ms-4">
+                                <strong class="d-block mb-1">Nombre Del Producto</strong>
+                                <small class="d-block">Categoria</small>
+                            </div>
+                        </a>
+                      
+                        <div class="actionsgroup">
+                            <a class="btn icon-edit" routerLink="/editproduct"><i class="bi bi-pencil-square fs-3"></i></a>
+
+                            <input type="submit" id="dropbutton" style="display: none;"/>
+                            <button type="button" class="btn icon-drop" onclick="document.getElementById('dropbutton').click();"><i class="bi bi-trash fs-3"></i></button>
+                        </div>
+                    </li>
+                    <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-4 listaProducto">
+                        <a class="ms-4 me-auto descripcionProducto d-flex align-items-center text-decoration-none text-black" routerLink="/viewproduct">
+                            <div class="d-inline">
+                                <img class="img-fluid img-product img-thumbnail" src="../../../../assets/images/62.jpg" alt="Product">
+                            </div>
+                            <div class="d-inline ms-4">
+                                <strong class="d-block mb-1">Nombre Del Producto</strong>
+                                <small class="d-block">Categoria</small>
+                            </div>
+                        </a>
+                      
+                        <div class="actionsgroup">
+                            <a class="btn icon-edit" routerLink="/editproduct"><i class="bi bi-pencil-square fs-3"></i></a>
+
+                            <input type="submit" id="dropbutton" style="display: none;"/>
+                            <button type="button" class="btn icon-drop" onclick="document.getElementById('dropbutton').click();"><i class="bi bi-trash fs-3"></i></button>
+                        </div>
+                    </li>
+                    <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-4 listaProducto">
+                        <a class="ms-4 me-auto descripcionProducto d-flex align-items-center text-decoration-none text-black" routerLink="/viewproduct">
+                            <div class="d-inline">
+                                <img class="img-fluid img-product img-thumbnail" src="../../../../assets/images/63.jpg" alt="Product">
+                            </div>
+                            <div class="d-inline ms-4">
+                                <strong class="d-block mb-1">Nombre Del Producto</strong>
+                                <small class="d-block">Categoria</small>
+                            </div>
+                        </a>
+                      
+                        <div class="actionsgroup">
+                            <a class="btn icon-edit" routerLink="/editproduct"><i class="bi bi-pencil-square fs-3"></i></a>
+
+                            <input type="submit" id="dropbutton" style="display: none;"/>
+                            <button type="button" class="btn icon-drop" onclick="document.getElementById('dropbutton').click();"><i class="bi bi-trash fs-3"></i></button>
+                        </div>
+                    </li>
+                    <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-4 listaProducto">
+                        <a class="ms-4 me-auto descripcionProducto d-flex align-items-center text-decoration-none text-black" routerLink="/viewproduct">
+                            <div class="d-inline">
+                                <img class="img-fluid img-product img-thumbnail" src="../../../../assets/images/64.jpg" alt="Product">
+                            </div>
+                            <div class="d-inline ms-4">
+                                <strong class="d-block mb-1">Nombre Del Producto</strong>
+                                <small class="d-block">Categoria</small>
+                            </div>
+                        </a>
+                      
+                        <div class="actionsgroup">
+                            <a class="btn icon-edit" routerLink="/editproduct"><i class="bi bi-pencil-square fs-3"></i></a>
+
+                            <input type="submit" id="dropbutton" style="display: none;"/>
+                            <button type="button" class="btn icon-drop" onclick="document.getElementById('dropbutton').click();"><i class="bi bi-trash fs-3"></i></button>
+                        </div>
+                    </li>
+                    <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-4 listaProducto">
+                        <a class="ms-4 me-auto descripcionProducto d-flex align-items-center text-decoration-none text-black" routerLink="/viewproduct">
+                            <div class="d-inline">
+                                <img class="img-fluid img-product img-thumbnail" src="../../../../assets/images/65.jpg" alt="Product">
+                            </div>
+                            <div class="d-inline ms-4">
+                                <strong class="d-block mb-1">Nombre Del Producto</strong>
+                                <small class="d-block">Categoria</small>
+                            </div>
+                        </a>
+                      
+                        <div class="actionsgroup">
+                            <a class="btn icon-edit" routerLink="/editproduct"><i class="bi bi-pencil-square fs-3"></i></a>
+
+                            <input type="submit" id="dropbutton" style="display: none;"/>
+                            <button type="button" class="btn icon-drop" onclick="document.getElementById('dropbutton').click();"><i class="bi bi-trash fs-3"></i></button>
+                        </div>
+                    </li>
+                </ol>-->
+            </div>
+        </div>
+    </div>
+</div>

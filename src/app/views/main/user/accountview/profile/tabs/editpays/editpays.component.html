@@ -1,0 +1,175 @@
+<div class="animate__animated animate__zoomIn animate__faster">
+    <div class="container">
+
+        <div class="row d-flex justify-content-center align-items-center mb-5">
+
+            <div class="col-4">
+                <ul class="nav flex-column nav-pills me-3" role="tablist">
+                    <li class="nav-item border">
+                        <a href="#paypal" class="nav-link text-muted text-center" data-bs-toggle="tab" role="tab" aria-controls="perfil" aria-selected="false">
+                            <i><img src="../../../../../assets/icons/payment/paypal-f.svg" alt=""></i>
+                        </a>
+                    </li>
+                    <li class="nav-item border">
+                        <a href="#mercadopago" class="nav-link text-muted text-center" data-bs-toggle="tab" role="tab" aria-controls="perfil" aria-selected="false" disabled>
+                            <i><img src="../../../../../assets/icons/payment/mp-f.svg" alt=""></i>
+                        </a>
+                    </li>
+                    <li class="nav-item border">
+                        <a href="#debito" class="nav-link active" data-bs-toggle="tab" role="tab" aria-controls="perfil" aria-selected="false">
+                            <i class="d-inline"><img src="../../../../../assets/icons/payment/mc-f.svg" alt="" class="img-card"></i>
+                            <p class="d-none d-md-inline">Tarjeta De Debito</p>
+                        </a>
+                    </li>
+                    <li class="nav-item border">
+                        <a href="#credito" class="nav-link" data-bs-toggle="tab" role="tab" aria-controls="perfil" aria-selected="false">
+                            <i class="d-inline"><img src="../../../../../assets/icons/payment/visa-f.svg" alt="" class="img-card"></i>
+                            <p class="d-none d-md-inline">Tarjeta De Credito</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-6">
+                
+                <div class="tab-content">
+                    <div class="tab-pane" role="tabpanel" id="mercadopago">
+                        <h4>Mercado Pago</h4>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="paypal">
+                        
+                        <div id="smart-button-container">
+                            <div style="text-align: center;">
+                              <div id="paypal-button-container"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane active" role="tabpanel" id="debito">
+                        <input type="text" class="form-control mb-3" id="numTarjetaD" placeholder="Nombre En La Tarjeta">
+                        <input type="text" class="form-control mb-3" id="nombTarjetaD" placeholder="Numero En La Tarjeta">
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control mb-3" id="añoTarjetaD" placeholder="MM/YY">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" id="ccvTarjetaD" placeholder="CCV">
+
+                            </div>
+                        </div>
+
+                        <div class="row mb-3 mb-xl-0 justify-content-between align-items-center">
+                            <div class="col-12 col-md-auto mb-3 mb-md-0">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="infoEnvio">
+                                    <label class="form-check-label" for="infoEnvio">Tarjeta Predeterminada</label>
+                                  </div>
+                            </div>
+                            <div class="col-12 col-md-auto">
+                                <input type="submit" class="btn btn-purple w-100" value="Guardar">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="credito">
+                        <input type="text" class="form-control mb-3" id="numTarjetaC" placeholder="Nombre En La Tarjeta">
+                        <input type="text" class="form-control mb-3" id="nombTarjetaC" placeholder="Numero En La Tarjeta">
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control mb-3" id="añoTarjetaC" placeholder="MM/YY">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" id="ccvTarjetaC" placeholder="CCV">
+
+                            </div>
+                        </div>
+
+                        <div class="row mb-3 mb-xl-0 justify-content-between align-items-center">
+                            <div class="col-12 col-md-auto mb-3 mb-md-0">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="infoEnvio">
+                                    <label class="form-check-label" for="infoEnvio">Tarjeta Predeterminada</label>
+                                  </div>
+                            </div>
+                            <div class="col-12 col-md-auto">
+                                <input type="submit" class="btn btn-purple w-100" value="Guardar">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col">
+                <h4 class="fw-normal mb-4">Metodos Guardados</h4>
+
+
+                <div class="list-group px-5">
+                    <a href="#" routerLink="/accountview" class="list-group-item list-group-item-action active">
+                        <h6>Metodo Predeterminado</h6>
+
+                        <div class="pagossave d-flex align-items-center p-2">
+
+                            <div class="icon-save">
+                                <i class="bi bi-credit-card d-inline me-5 fw-light"></i>
+                            </div>
+
+                            <div class="info-save rounded border border-2 p-2">
+                                <p class="d-inline fw-bold">XXXX-XXXX-XXXX-1234</p>
+                            </div>
+
+                        </div>
+                    </a>
+                    <a href="#" routerLink="/accountview" class="list-group-item list-group-item-action">
+                        <h6>Metodo #1</h6>
+
+                        <div class="pagossave d-flex align-items-center p-2">
+
+                            <div class="icon-save">
+                                <i class="bi bi-credit-card d-inline me-5 fw-light"></i>
+                            </div>
+
+                            <div class="info-save rounded border border-2 p-2">
+                                <p class="d-inline fw-bold">XXXX-XXXX-XXXX-1234</p>
+                            </div>
+
+                        </div>
+                    </a>
+                    <a href="#" routerLink="/accountview" class="list-group-item list-group-item-action">
+                        <h6>Metodo #2</h6>
+
+                        <div class="pagossave d-flex align-items-center p-2">
+
+                            <div class="icon-save">
+                                <i class="bi bi-credit-card d-inline me-5 fw-light"></i>
+                            </div>
+
+                            <div class="info-save rounded border border-2 p-2">
+                                <p class="d-inline fw-bold">XXXX-XXXX-XXXX-1234</p>
+                            </div>
+
+                        </div>
+                    </a>
+                    <a href="#" routerLink="/accountview" class="list-group-item list-group-item-action">
+                        <h6>Metodo #3</h6>
+
+                        <div class="pagossave d-flex align-items-center p-2">
+
+                            <div class="icon-save">
+                                <i class="bi bi-credit-card d-inline me-5 fw-light"></i>
+                            </div>
+
+                            <div class="info-save rounded border border-2 p-2">
+                                <p class="d-inline fw-bold">XXXX-XXXX-XXXX-1234</p>
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
