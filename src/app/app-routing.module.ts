@@ -26,6 +26,7 @@ import { EditsuscriptionComponent } from './views/main/user/accountview/profile/
 import { EditproductComponent } from './views/main/user/accountview/products/editproduct/editproduct.component';
 
 import {GeneralViewComponent} from './views/main/products/general-view/general-view.component';
+import { AuthGuard } from './guards/auth.guard';
 
 
 const routes: Routes = [
@@ -37,7 +38,7 @@ const routes: Routes = [
 
   {
     path: 'accountview', 
-    component:AccountviewComponent,
+    component:AccountviewComponent,canActivate: [AuthGuard],
     children: [
       {
         path: '',

@@ -12,5 +12,8 @@ export class AccountviewComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  clearStorage() {
+    localStorage.clear();
+    }
 
 }
