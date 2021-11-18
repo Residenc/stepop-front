@@ -40,7 +40,7 @@
     }
 }
 
-.btn-success{
+.btn-primary, .btn-secondary{
     &:focus {
         border-color: rgb(200,200,200);
         box-shadow: 0 0 15px 0 rgba(60, 60, 60, 0.5);

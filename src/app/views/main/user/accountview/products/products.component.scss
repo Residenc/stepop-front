@@ -1,3 +1,55 @@
+table{
+    vertical-align:middle;
+    thead{
+        background: #56057c;
+        color: white;
+        tr{
+            th{
+                font-size: 16px;
+                font-weight: 700;
+            }
+        }
+    }
+    tbody{
+        tr{
+            background: rgb(216, 196, 243);
+            td{
+                font-size: 15px;
+                button{
+                    .icon-edit{
+                        font-size: 20px;
+                        color: rgb(150, 150, 150);
+                        transition: color .2s ease-in-out;
+                    }
+                    .icon-drop{
+                        font-size: 20px;
+                        color: rgb(150, 150, 150);
+                        transition: color .2s ease-in-out;
+                    }
+                    &:hover{
+                        .icon-edit{
+                            color: rgb(0, 0, 0);
+                        }
+                        .icon-drop{
+                            color: rgb(182, 1, 1);
+                        }
+                    }
+                    &:focus {
+                        box-shadow: 0 0 15px 0 rgba(60, 60, 60, 0.5);
+                    }
+                }
+            }
+            &:nth-child(even) {
+                background: rgb(123, 84, 175);
+                th, td{
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+/*
 .productos-tab{
     .listaProductos{
         .listaProducto{
@@ -8,13 +60,11 @@
                     max-height: 104px;
                 }
             }
-            .actionsgroup{
-                .icon-edit{
-                    color: rgb(0, 0, 0);
-                }
-                .icon-drop{
-                    color: rgb(255, 50, 50);
-                }
+            .icon-edit{
+                color: rgb(0, 0, 0);
+            }
+            .icon-drop{
+                color: rgb(255, 50, 50);
             }
             &:nth-child(odd){
                 background: rgb(96, 0, 156);
@@ -31,3 +81,5 @@
         }
     }
 }
+
+*/
