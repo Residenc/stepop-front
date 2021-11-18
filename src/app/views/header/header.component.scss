@@ -66,6 +66,7 @@ header{
                     text-decoration: none !important;
                     white-space: nowrap;
                     margin-left: -0.5rem !important;
+                    
                 }
                 .navbar-tool-label{
                     position: absolute;
@@ -82,6 +83,27 @@ header{
                     line-height: 1.25rem;
                 }
             }
+
+            .btn-accountOnline{
+                .navbar-tool-icon-box{
+                    img{
+                        border-radius: 100%;
+                    }
+                }
+                .navbar-tool-text{
+                    .dropdown{
+                        #dropdownOnline{
+                            background-color: none;
+                            color: rgb(255,255,255);
+                            font-size: 0.85rem;
+                            &:focus {
+                                box-shadow: 0 0 15px 0 rgba(60, 60, 60, 0.5);
+                            }
+                        }
+                    }
+                }
+            }
+
             .btn-notifications{
                 border: none;
                 background: none;
