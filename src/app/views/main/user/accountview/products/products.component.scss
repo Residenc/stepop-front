@@ -1,7 +1,7 @@
 table{
     vertical-align:middle;
     thead{
-        background: #56057c;
+        background: #000000;
         color: white;
         tr{
             th{
@@ -12,7 +12,7 @@ table{
     }
     tbody{
         tr{
-            background: rgb(216, 196, 243);
+            background: rgb(220, 220, 220);
             td{
                 font-size: 15px;
                 button{
@@ -40,7 +40,7 @@ table{
                 }
             }
             &:nth-child(even) {
-                background: rgb(123, 84, 175);
+                background: rgb(60, 60, 60);
                 th, td{
                     color: white;
                 }
