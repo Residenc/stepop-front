@@ -24,14 +24,14 @@
                             <td>{{usuario.nombre}}</td>
                             <td>{{usuario.tipo}}</td>
                             <td>{{usuario.descripcion}}</td>
-                            <td>${{usuario.precio}}</td>
-                            <td>{{usuario.stock}} UDS</td>
+                            <td>${{usuario.precio}}.00 MXM</td>
+                            <td>{{usuario.stock}} </td>
                             <td>{{usuario.id_usuario}}</td>
                             <td class="text-center bg-white">
-                                <button [routerLink]="['/editproduct']" type="button" class="btn"><i class="bi bi-pencil-square icon-edit"></i></button>
+                                <button [routerLink]="['/editproduct',usuario.id_produc]" type="button" class="btn"><i class="bi bi-pencil-square icon-edit"></i></button>
                             </td>
                             <td class="text-center bg-white">
-                                <button [routerLink]="['/editproduct']" type="button" class="btn"><i class="bi bi-trash icon-drop"></i></button>
+                                <button (click)="eliminar(usuario.id_produc)" type="button" class="btn"><i class="bi bi-trash icon-drop"></i></button>
                             </td>
                           </tr>
                         </tbody>
