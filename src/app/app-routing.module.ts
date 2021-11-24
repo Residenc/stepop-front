@@ -104,7 +104,7 @@ const routes: Routes = [
   },
 
   {path: 'registerview', component:RegisterviewComponent},
-  {path: 'viewproduct', component:ViewProductComponent},
+  {path: 'viewproduct/:id', component:ViewProductComponent},
   {path: 'editproduct/:id', component: EditproductComponent},
   {path: 'generalview', component:GeneralViewComponent}
 ];

@@ -163,9 +163,9 @@
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 productsContenido">
 
 
-                    <div class="col product" *ngFor="let usuario of ListarProducto">
+                    <div class="col product" *ngFor="let producto of ListarProducto">
                         <div class="card">
-                            <a href="#" routerLink="/viewproduct"><h5 class="card-header">{{usuario.nombre}}</h5></a>
+                            <a  (click)="prueba(producto.id_produc)"><h5 class="card-header">{{producto.nombre}}</h5></a>
                             <div class="row g-0 d-flex justify-content-center">
                                 <div class="col-5 align-self-center img-column">
                                     <a href="#" routerLink="/viewproduct"><img class="img-fluid img-product" src="../../../../../assets/images/59.jpg" alt=""></a>
@@ -174,10 +174,10 @@
                                     <div class="card-body">
                                         <div class="description mb-4">
                                             <strong class="product-description-title">Descripcion:</strong>
-                                            <p class="product-description mb-2">{{usuario.precio}}</p>
+                                            <p class="product-description mb-2">{{producto.precio}}</p>
                                         </div>
                                         <div class="product-price mb-4">
-                                            <span class="price d-block">$ {{usuario.precio}}.<small>00</small></span>
+                                            <span class="price d-block">$ {{producto.precio}}.<small>00</small></span>
                                             <small class="shipment d-block">Envio Gratis!</small>
                                         </div>
                                         <div class="buttonsActions">
@@ -188,7 +188,7 @@
                                 </div>
                                 <div class="product-info d-flex justify-content-between px-3 my-3">
                                     <small class="product-subcategory"><a href="#">Subcategoria</a></small>
-                                    <small class="product-seller">Vendido Por :<a href="#"> {{usuario.nombre_empresa}}</a></small>
+                                    <small class="product-seller">Vendido Por :<a href="#"> {{producto.nombre_empresa}}</a></small>
                                 </div>  
                             </div>
                         </div>

@@ -40,6 +40,12 @@ export class ProductosService {
   editProducto(id_usuario:string| undefined, user:Producto){
     return this.http.put(this.url+'/editarpr/'+id_usuario, user);
   }
+
+  //Extraer un producto para viewproduct
+  getPro(id_produc:string){
+    return this.http.get(this.url+'/vistapro/'+id_produc);
+  }
+
 }
     export interface Producto{
 id_produc?:string | any;
