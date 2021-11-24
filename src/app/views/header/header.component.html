@@ -47,11 +47,12 @@
                 </div>
             </a>
 
+            <div *ngIf="auth">
             <a class="navbar-tool text-decoration-none btn-accountOnline">
                 <div class="navbar-tool-icon-box d-none d-sm-block">
                     <img src="../../../assets/images/profile1.jpg" width="54" height="54">
                 </div>
-                <div class="navbar-tool-text d-none d-xl-block">
+                <div  class="navbar-tool-text d-none d-xl-block">
                     <div class="dropdown">
                         <button class="btn dropdown-toggle" type="button" id="dropdownOnline" data-bs-toggle="dropdown" aria-expanded="false">
                             <small class="me-2">Hola, Nombre</small>
@@ -63,6 +64,7 @@
                     </div>
                 </div>
             </a>
+        </div>
            
             <button class="navbar-tool text-decoration-none" data-bs-toggle="offcanvas" data-bs-target="#cart-offcanvas" aria-controls="offcanvas" style="border: none; background: none;" type="button">
                 <div class="navbar-tool-icon-box d-none d-sm-block">
