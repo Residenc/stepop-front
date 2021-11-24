@@ -38,6 +38,7 @@
             </div>
 
 
+            <div *ngIf="!auth">
             <a class="navbar-tool text-decoration-none btn-accountOffline" href="#signin-modal" data-bs-toggle="modal">
                 <div class="navbar-tool-icon-box d-none d-sm-block">
                     <i class="bi bi-person-circle navbar-tool-icon"></i>
@@ -46,6 +47,7 @@
                     <small class="d-block">Mi Cuenta</small>
                 </div>
             </a>
+            </div>
 
             <div *ngIf="auth">
             <a class="navbar-tool text-decoration-none btn-accountOnline">
@@ -59,7 +61,7 @@
                         </button>
                         <ul class="dropdown-menu animate__animated animate__fadeIn animate__faster" aria-labelledby="dropdownOnline">
                           <li><a class="dropdown-item" href="#">Mi Cuenta</a></li>
-                          <li><a class="dropdown-item" href="#">Cerrar Sesion</a></li>
+                          <li><a class="dropdown-item" (click)="logout()">Cerrar Sesion</a></li>
                         </ul>
                     </div>
                 </div>
