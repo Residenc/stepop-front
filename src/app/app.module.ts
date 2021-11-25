@@ -36,6 +36,7 @@ import { EditaddressComponent } from './views/main/user/accountview/profile/tabs
 import { EditpaysComponent } from './views/main/user/accountview/profile/tabs/editpays/editpays.component';
 import { EditsuscriptionComponent } from './views/main/user/accountview/profile/tabs/editsuscription/editsuscription.component';
 import { EditproductComponent } from './views/main/user/accountview/products/editproduct/editproduct.component';
+import { AddproductComponent } from './views/main/user/accountview/products/addproduct/addproduct.component';
 
 import { ViewProductComponent } from './views/main/products/view-product/view-product.component';
 import { BestsellersComponent } from './views/main/products/view-categories/bestsellers/bestsellers.component';
@@ -76,6 +77,7 @@ import {LoadScriptsService} from "./services/load-scripts/load-scripts.service";
     NewcomersComponent,
     GeneralViewComponent,
     QuickViewComponent,
+    AddproductComponent,
   ],
   imports: [
     BrowserModule,

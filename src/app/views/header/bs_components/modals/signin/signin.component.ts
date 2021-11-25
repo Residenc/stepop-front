@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UsersService } from 'src/app/services/Users/users.service';
-import {AuthenticationService} from '../../../../../services/authentication/authentication.service'
+import {AuthenticationService} from '../../../../../services/authentication/authentication.service';
+
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
@@ -24,6 +26,23 @@ export class SigninComponent implements OnInit {
       this.authService.signIn(this.authForm.value).subscribe((res:any)=> {
         localStorage.setItem('token',res.token);
         this.router.navigate(['accountview','home']); 
+        console.log(res.token);
+        
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 2000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+          }
+        });
+        Toast.fire({
+          icon: 'success',
+          title: 'Bienvenido, NOMBRE'
+        });
       },(err) =>
       console.log('Ocurrio un error'+err))
     }catch(error){

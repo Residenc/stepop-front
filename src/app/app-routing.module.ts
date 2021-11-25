@@ -24,6 +24,7 @@ import { EditaddressComponent } from './views/main/user/accountview/profile/tabs
 import { EditpaysComponent } from './views/main/user/accountview/profile/tabs/editpays/editpays.component';
 import { EditsuscriptionComponent } from './views/main/user/accountview/profile/tabs/editsuscription/editsuscription.component';
 import { EditproductComponent } from './views/main/user/accountview/products/editproduct/editproduct.component';
+import { AddproductComponent } from './views/main/user/accountview/products/addproduct/addproduct.component';
 
 import {GeneralViewComponent} from './views/main/products/general-view/general-view.component';
 import { AuthGuard } from './guards/auth.guard';
@@ -106,6 +107,7 @@ const routes: Routes = [
   {path: 'registerview', component:RegisterviewComponent},
   {path: 'viewproduct/:id', component:ViewProductComponent},
   {path: 'editproduct/:id', component: EditproductComponent},
+  {path: 'addproduct', component: AddproductComponent},
   {path: 'generalview', component:GeneralViewComponent}
 ];
 

@@ -23,7 +23,7 @@
                 <a href="#" routerLink="/generalview"><button class="btn searchbtn" type="submit"><i class="bi bi-search"></i></button></a>
             </div>
     
-            <div class="btn-group">
+            <div class="btn-group d-none">
                 <button class="navbar-tool text-decoration-none btn-notifications" type="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
                     <div class="navbar-tool-icon-box d-none d-sm-block">
                         <span class="navbar-tool-label">+9</span>
@@ -60,8 +60,8 @@
                             <small class="me-2">Hola, Nombre</small>
                         </button>
                         <ul class="dropdown-menu animate__animated animate__fadeIn animate__faster" aria-labelledby="dropdownOnline">
-                          <li><a class="dropdown-item" href="#">Mi Cuenta</a></li>
-                          <li><a class="dropdown-item" (click)="logout()">Cerrar Sesion</a></li>
+                          <li><a class="dropdown-item" href="#" routerLink="/accountview/home">Mi Cuenta</a></li>
+                          <li><a class="dropdown-item" (click)="logout()" href="#" routerLink="/main">Cerrar Sesion</a></li>
                         </ul>
                     </div>
                 </div>

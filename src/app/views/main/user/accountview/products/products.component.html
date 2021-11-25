@@ -4,7 +4,11 @@
             <div class="col">
                 <h2 class="display-6">Lista De Productos</h2>
                 <hr class="mb-4">   
-
+                <div class="row d-flex justify-content-end mb-4">
+                    <div class="col-auto">
+                        <a href="#" [routerLink]="['/addproduct']" class="enlaceAdd"><i class="bi bi-plus-circle me-2"></i>Agregar Producto</a>
+                    </div>
+                </div>
                 <div class="table-responsive-lg">
                     <table class="table table-borderless">
                         <thead>
