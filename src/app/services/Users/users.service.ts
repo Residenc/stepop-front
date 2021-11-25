@@ -8,14 +8,24 @@ export class UsersService {
   url='http://localhost:3000';
   constructor(private http: HttpClient) { }
 
+  getUsuario(id_user:string){
+    return this.http.get(this.url+'/usuario/'+id_user);
+  }
+
   register(user:User){
     return this.http.post(this.url+'/registro',user);
   }
 
+  getUsuarios()
+  {
+    return this.http.get(this.url +'/usuarios');
+  }
+  
+
 }
 export interface User{
-  id_user?:string | any;
-  nombre?:string | any;
+  id_usuario?:string | any;
+  nombre_usuario?:string | any;
   apellidos?:string | any;
   email?:string | any;
   password?:string | any;
