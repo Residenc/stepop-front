@@ -18,7 +18,7 @@ export class SigninComponent implements OnInit {
   });
   constructor(private authService:AuthenticationService,private router:Router,
     private userService:UsersService, private activeRoute :ActivatedRoute) { }
-
+    
   ngOnInit(): void {
    
   }
@@ -70,6 +70,10 @@ export class SigninComponent implements OnInit {
     email: new FormControl('',[Validators.required]),
   });
 
+  navigation(){
+    this.router.navigate(["generalview"]);
+    
+  }
   onRegister(){
     console.log(this.registerForm.value)
     if(this.registerForm.valid){
