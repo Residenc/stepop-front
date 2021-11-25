@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
-import { UsersService } from 'src/app/services/Users/users.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { User, UsersService } from 'src/app/services/Users/users.service';
 import {AuthenticationService} from '../../../../../services/authentication/authentication.service'
 @Component({
   selector: 'app-signin',
@@ -14,22 +14,27 @@ export class SigninComponent implements OnInit {
     email: new FormControl('' ,[Validators.required]),
     password: new FormControl('',[Validators.required,Validators.minLength(7)])
   });
-  constructor(private authService:AuthenticationService,private router:Router,private regService:UsersService) { }
+  constructor(private authService:AuthenticationService,private router:Router,
+    private userService:UsersService, private activeRoute :ActivatedRoute) { }
 
   ngOnInit(): void {
+   
   }
 
   onSubmit() { 
     try{
       this.authService.signIn(this.authForm.value).subscribe((res:any)=> {
         localStorage.setItem('token',res.token);
-        this.router.navigate(['accountview','home']); 
+        console.log(this.authForm.value)
+        //this.router.navigate(['accountview/home']);
       },(err) =>
       console.log('Ocurrio un error'+err))
     }catch(error){
       console.log(error)
     }
   };  
+
+
 
   registerForm= new FormGroup({
     nombre: new FormControl('',[Validators.required]),
@@ -41,7 +46,7 @@ export class SigninComponent implements OnInit {
   onRegister(){
     console.log(this.registerForm.value)
     if(this.registerForm.valid){
-      this.regService.register(this.registerForm.value).subscribe((res:any) =>{
+      this.userService.register(this.registerForm.value).subscribe((res:any) =>{
       console.log(res);
       this.router.navigate(['registerview'])
     })

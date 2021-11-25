@@ -59,9 +59,12 @@
                         <button class="btn dropdown-toggle" type="button" id="dropdownOnline" data-bs-toggle="dropdown" aria-expanded="false">
                             <small class="me-2">Hola, Nombre</small>
                         </button>
-                        <ul class="dropdown-menu animate__animated animate__fadeIn animate__faster" aria-labelledby="dropdownOnline">
-                          <li><a class="dropdown-item" href="#">Mi Cuenta</a></li>
+                        <ul  class="dropdown-menu animate__animated animate__fadeIn animate__faster" aria-labelledby="dropdownOnline">
+                          <li *ngFor="let usuario of ListarUsuario">
+                              <a class="dropdown-item" [routerLink]="['accountview/home',usuario.id_usuario]">Mi Cuenta</a>
+                        </li>
                           <li><a class="dropdown-item" (click)="logout()">Cerrar Sesion</a></li>
+                          
                         </ul>
                     </div>
                 </div>

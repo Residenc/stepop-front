@@ -23,13 +23,13 @@
             <div class="mb-3 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
                 <label for="user-name" class="col-12 col-md-3 col-lg-4 col-form-label user-label">Nombre:</label>
                 <div class="col-12 col-md-6 col-lg-8">
-                <input type="text" readonly class="form-control user-campo" id="user-name" value="Yorman Jesus Rojas Martinez" disabled>
+                <input [(ngModel)]="usuario.nombre_usuario" type="text" readonly class="form-control user-campo" id="user-name" value="Yorman Jesus Rojas Martinez" disabled>
                 </div>
             </div>
             <div class="mb-3 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
                 <label for="user-email" class="col-12 col-md-3 col-lg-4 col-form-label user-label">Email:</label>
                 <div class="col-12 col-md-6 col-lg-8">
-                <input type="email" readonly class="form-control user-campo" id="user-email" value="l161080213@iztapalapa.tecnm.mx" disabled>
+                <input [(ngModel)]="usuario.email" type="email" readonly class="form-control user-campo" id="user-email" value="l161080213@iztapalapa.tecnm.mx" disabled>
                 </div>
             </div>
             <div class="mb-3 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
@@ -61,9 +61,9 @@
                 </div>
             </div>
             <div class="mb-3 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
-                <label for="user-group" class="col-12 col-md-3 col-lg-4 col-form-label user-label">Asociacion (Registrados):</label>
+                <label for="user-group" class="col-12 col-md-3 col-lg-4 col-form-label user-label">Empresa (Registrados):</label>
                 <div class="col-12 col-md-6 col-lg-8">
-                <input type="text" readonly class="form-control user-campo" id="user-group" value="Nombre De Asociacion" disabled>
+                <input type="text" readonly class="form-control user-campo" id="user-group" value="Nombre empresa" disabled>
                 </div>
             </div>
             <div class="mb-3 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
