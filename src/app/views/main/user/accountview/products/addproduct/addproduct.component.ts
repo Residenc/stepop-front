@@ -15,7 +15,10 @@ public previsualizacion :string;
   newProduct= new FormGroup({
     nombre: new FormControl('',),
     descripcion: new FormControl('',),
-    imagen: new FormControl('')
+    imagen: new FormControl(''),
+    precio: new FormControl(''),
+    stock: new FormControl(''),
+    tipo: new FormControl('')
     /*password: new FormControl('',),
     username:  new FormControl(''),
     email: new FormControl(''),
@@ -70,6 +73,7 @@ public previsualizacion :string;
       this.productService.addProducto(this.newProduct.value).subscribe((res) =>{
       console.log(this.newProduct.value)
       console.log(res);
+      console.log('Agregado con exito')
     }
     )}
     else

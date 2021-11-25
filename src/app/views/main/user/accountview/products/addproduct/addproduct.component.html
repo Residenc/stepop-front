@@ -35,7 +35,7 @@
             </div>
             <div class="mb-4 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
                 <div class="col-10">
-                    <select name="edo" id="edo" class="form-select d-block w-100">
+                    <select name="edo" id="edo" class="form-select d-block w-100" formControlName="tipo">
                         <option value="">Seleccionar Tipo</option>
                         <option value="producto">Producto</option>
                         <option value="servicio">Servicio</option>
@@ -65,13 +65,13 @@
             <div class="mb-4 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
                 <label for="product-price" class="col-12 col-md-3 col-lg-2 col-form-label product-label">Precio:</label>
                 <div class="col-12 col-md-6 col-lg-4">
-                <input type="number" class="form-control product-campo">
+                <input type="number" class="form-control product-campo" formControlName="precio">
                 </div>
             </div>
             <div class="mb-4 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
                 <label for="product-marca" class="col-12 col-md-3 col-lg-2 col-form-label product-label">Stock A Agregar:</label>
                 <div class="col-12 col-md-6 col-lg-4">
-                <input type="number" class="form-control product-campo">
+                <input type="number" class="form-control product-campo" formControlName="stock">
                 </div>
             </div>
             <div class="mb-4 mt-4 mt-lg-0 d-flex justify-content-center align-items-center actions">
