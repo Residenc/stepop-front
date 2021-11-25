@@ -9,18 +9,14 @@ import { Producto, ProductosService } from 'src/app/services/productos/productos
 })
 export class GeneralViewComponent implements OnInit {
   ListarProducto:Producto []|any;
-  constructor(
-    private loadScripts:LoadScriptsService,
-    public productoService:ProductosService,
-    private router:Router
-    ) { 
-    loadScripts.loadS(["moretext"]);
+  constructor(private loadScripts:LoadScriptsService, public productoService:ProductosService, private router:Router) { 
+    loadScripts.loadS(["tooltip"]);
   }
 
   ngOnInit(): void {
     this.listarProduc();
-    
   }
+  
   listarProduc(){
     this.productoService.getlistarproyser().subscribe(
       res=>{

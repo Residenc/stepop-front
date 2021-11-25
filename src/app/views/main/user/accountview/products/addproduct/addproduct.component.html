@@ -1,0 +1,77 @@
+<div class="container shadow rounded-3 p-3 p-md-5 my-md-5 my-4" style="background-color: rgb(255,255,255);">
+    <h2 class="display-6 mb-5">Agregar Producto</h2>
+    <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-auto p-2 img-thumbnail rounded bg-light me-5">
+            <div class="profile-photo position-relative">
+                <div class="profile-button position-absolute top-0 end-0 d-md-none d-block">
+                    <input type="file" id="selectedFile" style="display: none;" />
+                    <button type="button" class="btn btn-photo-icon" onclick="document.getElementById('selectedFile').click();" data-bs-toggle="tooltip" data-bs-placement="top" title="Cambiar Foto De Perfil"><i class="bi bi-pencil-square"></i></button>
+                </div>
+                <div class="profile-button position-absolute bottom-0 start-50 translate-middle-x d-md-block d-none">
+                    <input type="file" id="selectedFile" style="display: none;" />
+                    <button type="button" class="btn btn-photo-text" onclick="document.getElementById('selectedFile').click();">Imagen Del Producto</button>
+                </div>
+                <img src="../../../../../assets/images/insert-img.png" class="img-fluid" alt="Foto De Perfil" width="300" height="300">
+            </div>
+        </div>
+        <form class="col-12 col-lg-7">
+            <div class="mb-4 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
+                <label  class="col-12 col-md-3 col-lg-2 col-form-label product-label">Nombre:</label>
+                <div class="col-12 col-md-6 col-lg-8">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="mb-4 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
+                <label  class="col-12 col-md-3 col-lg-2 col-form-label product-label">Descripcion:</label>
+                <div class="col-12 col-md-6 col-lg-8">
+                    <textarea type="text" class="form-control" style="height: 100px"></textarea>
+                </div>
+            </div>
+            <div class="mb-4 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
+                <div class="col-10">
+                    <select name="edo" id="edo" class="form-select d-block w-100">
+                        <option value="">Seleccionar Tipo</option>
+                        <option value="producto">Producto</option>
+                        <option value="servicio">Servicio</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mb-4 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
+                <div class="col-10">
+                    <select name="edo" id="edo" class="form-select d-block w-100">
+                        <option value="" selected>Seleccionar Categoria</option>
+                        <option value="1">Textil</option>
+                        <option value="2">Computo</option>
+                        <option value="3">Imprenta</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mb-4 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
+                <div class="col-10">
+                    <select name="edo" id="edo" class="form-select d-block w-100">
+                        <option value="" selected>Seleccionar Subcategoria</option>
+                        <option value="1">Sub 1</option>
+                        <option value="2">Sub 2</option>
+                        <option value="3">Sub 3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mb-4 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
+                <label for="product-price" class="col-12 col-md-3 col-lg-2 col-form-label product-label">Precio:</label>
+                <div class="col-12 col-md-6 col-lg-4">
+                <input type="number" class="form-control product-campo">
+                </div>
+            </div>
+            <div class="mb-4 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
+                <label for="product-marca" class="col-12 col-md-3 col-lg-2 col-form-label product-label">Stock A Agregar:</label>
+                <div class="col-12 col-md-6 col-lg-4">
+                <input type="number" class="form-control product-campo">
+                </div>
+            </div>
+            <div class="mb-4 mt-4 mt-lg-0 d-flex justify-content-center align-items-center actions">
+                <button type="button" class="btn btn-secondary me-3" (click)="back()">Cancelar</button>
+                <button class="btn btn-primary">Agregar Producto</button>
+            </div>
+        </form>
+    </div>
+</div>
