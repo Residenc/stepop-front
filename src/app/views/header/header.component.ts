@@ -70,7 +70,7 @@ export class HeaderComponent implements OnInit {
       }
     });
     Toast.fire({
-      title: 'Adios, NOMBRE'
+      title: 'Adios'
     });
   }
   }
