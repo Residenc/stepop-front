@@ -9,6 +9,11 @@
                 box-shadow: 0 0 15px 0 rgba(60, 60, 60, 0.5);
             }
         }
+        button{
+            &:focus {
+                box-shadow: 0 0 15px 0 rgba(60, 60, 60, 0.5);
+            }
+        }
     }
     .productsContenido{
         .product{
@@ -48,7 +53,7 @@
                                 text-align: center;
                                 .price{
                                     font-weight: 300;
-                                    font-size: 25px;
+                                    font-size: 20px;
                                 }
                                 .shipment{
                                     font-size: 16px;

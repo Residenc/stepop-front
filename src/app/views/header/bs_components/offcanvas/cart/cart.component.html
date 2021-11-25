@@ -1,26 +1,26 @@
 <div class="offcanvas offcanvas-end" id="cart-offcanvas" aria-labelledby="cartOffcanvasLabel" tabindex="-1">
     <div class="offcanvas-header border border-1">
-        <h5 id="cartOffcanvasLabel" class="mx-auto">Tu Carrito <span class="badge rounded-pill fw-bold">(4)</span></h5>
+        <h5 id="cartOffcanvasLabel" class="mx-auto">Tu Carrito <span class="badge rounded-pill fw-bold">{{totalItem}}</span></h5>
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
         <div class="cart-product-wrapper">
-            <div class="cart-product p-4">
+            <div class="cart-product p-4"  *ngFor="let producto of products; let i = index">
                 <div class="d-flex align-items center">
-                    <a routerLink="/viewproduct" data-bs-dismiss="offcanvas">
+                    <a  data-bs-dismiss="offcanvas">
                         <img src="https://picsum.photos/80/100" alt="" class="rounded img-fluid cart-product-image">
                     </a>
                     <div class="w-100">
-                        <a href="#" class="btn-close close text-sm me-2 rounded-circle border border-2 p-2" aria-label="Close"></a>
+                        <a href="#" class="btn-close close text-sm me-2 rounded-circle border border-2 p-2" aria-label="Close" (click)="removeItem(producto)"></a>
                         <div class="ps-3">
-                            <a class="cart-product-link" routerLink="/viewproduct" data-bs-dismiss="offcanvas">Nombre Del Producto</a>
+                            <a class="cart-product-link"  data-bs-dismiss="offcanvas">{{producto.nombre}}</a>
                             <small class="text-muted d-block">Cantidad: 1</small>
-                            <strong>$100.00</strong>
+                            <strong>$ {{producto.precio}} MXM</strong>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="cart-product p-4">
+            <!--<div class="cart-product p-4">
                 <div class="d-flex align-items center">
                     <a routerLink="/viewproduct" data-bs-dismiss="offcanvas">
                         <img src="https://picsum.photos/80/100" alt="" class="rounded img-fluid cart-product-image">
@@ -49,11 +49,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
         <div class="cart-total">
             <span class="text-uppercase text-muted">Subtotal</span>
-            <strong class="text-uppercase">$275.00</strong>
+            <strong >$ {{grandTotal}} </strong>
         </div>
         <div class="paygroup row p-5">
             <div class="col-12">

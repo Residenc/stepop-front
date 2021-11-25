@@ -30,8 +30,6 @@ export class SigninComponent implements OnInit {
         console.log(this.authForm.value)
         this.getId();
         //this.router.navigate(['accountview/home']);
-
-
         const Toast = Swal.mixin({
           toast: true,
           position: 'top-end',
