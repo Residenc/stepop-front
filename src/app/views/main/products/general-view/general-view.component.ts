@@ -11,6 +11,7 @@ export class GeneralViewComponent implements OnInit {
   ListarProducto:Producto []|any;
   constructor(private loadScripts:LoadScriptsService, public productoService:ProductosService, private router:Router) { 
     loadScripts.loadS(["tooltip"]);
+    loadScripts.loadS(["scrollAOS"]);
   }
 
   ngOnInit(): void {

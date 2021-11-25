@@ -29,8 +29,6 @@ export class SigninComponent implements OnInit {
         localStorage.setItem('token',res.token);
         console.log(this.authForm.value)
         //this.router.navigate(['accountview/home']);
-
-
         const Toast = Swal.mixin({
           toast: true,
           position: 'top-end',

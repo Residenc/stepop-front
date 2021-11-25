@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoadScriptsService } from 'src/app/services/load-scripts/load-scripts.service';
 
 @Component({
   selector: 'app-viewcart',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewcartComponent implements OnInit {
 
-  constructor() { }
+  constructor(private loadScripts:LoadScriptsService) {
+    loadScripts.loadS(["scrollAOS"])
+  }
 
   ngOnInit(): void {
   }
