@@ -165,7 +165,7 @@
 
                     <div class="col product" *ngFor="let producto of ListarProducto">
                         <div class="card">
-                            <a  (click)="prueba(producto.id_produc)"><h5 class="card-header">{{producto.nombre}}</h5></a>
+                            <a  [routerLink]="['/viewproduct',producto.id_produc]"><h5 class="card-header">{{producto.nombre}}</h5></a>
                             <div class="row g-0 d-flex justify-content-center">
                                 <div class="col-5 align-self-center img-column">
                                     <a href="#" routerLink="/viewproduct"><img class="img-fluid img-product" src="../../../../../assets/images/59.jpg" alt=""></a>

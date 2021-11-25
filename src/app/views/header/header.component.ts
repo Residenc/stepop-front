@@ -10,8 +10,9 @@ import { User, UsersService } from 'src/app/services/Users/users.service';
 })
 export class HeaderComponent implements OnInit {
   auth:boolean;
-  
-  user: User={
+
+
+  usuario: User={
     id_usuario:(''),
     nombre_usuario:'',
     apellidos:'',
@@ -19,11 +20,19 @@ export class HeaderComponent implements OnInit {
   };
   ListarUsuario: User[] | any;
   constructor(private authService: AuthenticationService,private router : Router,
-    private activeRoute: ActivatedRoute, private userService: UsersService) { }
+    private activeRoute: ActivatedRoute, private userService: UsersService) {}
+
+
 
   ngOnInit(): void {
     this.isAuth();
-    this.listarUsuario();
+ 
+  }
+
+  view(){
+    let id = localStorage.getItem('view');
+    console.log('Este es el Id', id)
+    this.router.navigate(['/accountview/home',id])
   }
 
   isAuth(){
@@ -37,18 +46,5 @@ export class HeaderComponent implements OnInit {
   logout(){
     localStorage.clear();
     this.router.navigate(['main'])
-    
   }
-
-
-  listarUsuario(){
-    this.userService.getUsuarios().subscribe(
-      res=>{
-        console.log(res);
-        this.ListarUsuario=<any>res;
-      },
-      err => console.log(err)
-    );
-  }
-
   }

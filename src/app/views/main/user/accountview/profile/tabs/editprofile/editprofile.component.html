@@ -7,13 +7,13 @@
             <div class="mb-3 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
                 <label for="edit-name" class="col-12 col-md-2 col-form-label user-label-edit">Nombre:</label>
                 <div class="col-12 col-md-6">
-                  <input type="text" class="form-control user-campo-edit" id="edit-name" #editName value="Yorman Jesus Rojas Martinez" disabled>
+                  <input [(ngModel)]="usuario.nombre_usuario" type="text" class="form-control user-campo-edit" id="edit-name" #editName value="Yorman Jesus Rojas Martinez" disabled>
                 </div>
             </div>
             <div class="mb-5 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
                 <label for="edit-email" class="col-12 col-md-2 col-form-label user-label-edit">Email:</label>
                 <div class="col-12 col-md-6">
-                  <input type="email" class="form-control user-campo-edit" id="edit-email" #editEmail value="l161080213@iztapalapa.tecnm.mx" disabled>
+                  <input [(ngModel)]="usuario.email" type="email" class="form-control user-campo-edit" id="edit-email" #editEmail value="l161080213@iztapalapa.tecnm.mx" disabled>
                 </div>
             </div>
             <div class="mb-3 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
@@ -36,7 +36,7 @@
             </div>
             <div class="mb-3 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
                 <div class="col-12 col-md-auto">
-                    <button type="submit" (click)="disabledBtn()" class="btn btn-success w-100" #editButton disabled>Editar</button>
+                    <button type="submit" (click)="disabledBtn()"  class="btn btn-success w-100" #editButton disabled>Editar</button>
                 </div>
             </div>
         </div>

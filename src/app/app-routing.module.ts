@@ -59,7 +59,7 @@ const routes: Routes = [
             pathMatch: 'full'
           },
           {
-            path: 'editprofile',
+            path: 'editprofile/:id',
             component: EditprofileComponent
           },
           {

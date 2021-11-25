@@ -26,6 +26,7 @@ export class SigninComponent implements OnInit {
       this.authService.signIn(this.authForm.value).subscribe((res:any)=> {
         localStorage.setItem('token',res.token);
         console.log(this.authForm.value)
+        this.getId();
         //this.router.navigate(['accountview/home']);
       },(err) =>
       console.log('Ocurrio un error'+err))
@@ -34,7 +35,13 @@ export class SigninComponent implements OnInit {
     }
   };  
 
-
+  getId(){
+    this.userService.getUsuarioId(this.authForm.value).subscribe((res:any)=>{
+      localStorage.setItem('view',res)
+      console.log(res)
+    },(err)=>
+    console.log('ocurrio un error + err')
+    )};
 
   registerForm= new FormGroup({
     nombre: new FormControl('',[Validators.required]),
