@@ -317,7 +317,11 @@
 
                     <div class="col product animate__animated animate__fadeIn" *ngFor="let producto of ListarProducto">
                         <div class="card">
+<<<<<<< HEAD
+                            <a  [routerLink]="['/viewproduct',producto.id_produc]"><h5 class="card-header">{{producto.nombre}}</h5></a>
+=======
                             <a (click)="prueba(producto.id_produc)" data-bs-toggle="tooltip" title="{{producto.nombre}}"><h5 class="card-header">{{producto.nombre}}</h5></a>
+>>>>>>> d1687d011ce29ebbdad71e240de4527a317a52f4
                             <div class="row g-0 d-flex justify-content-center">
                                 <div class="col-5 align-self-center img-column">
                                     <a href="#" routerLink="/viewproduct"><img class="img-fluid img-product" src="../../../../../assets/images/59.jpg" alt=""></a>

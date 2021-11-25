@@ -12,8 +12,9 @@ import Swal from 'sweetalert2';
 })
 export class HeaderComponent implements OnInit {
   auth:boolean;
-  
-  user: User={
+
+
+  usuario: User={
     id_usuario:(''),
     nombre_usuario:'',
     apellidos:'',
@@ -21,11 +22,19 @@ export class HeaderComponent implements OnInit {
   };
   ListarUsuario: User[] | any;
   constructor(private authService: AuthenticationService,private router : Router,
-    private activeRoute: ActivatedRoute, private userService: UsersService) { }
+    private activeRoute: ActivatedRoute, private userService: UsersService) {}
+
+
 
   ngOnInit(): void {
     this.isAuth();
-    this.listarUsuario();
+ 
+  }
+
+  view(){
+    let id = localStorage.getItem('view');
+    console.log('Este es el Id', id)
+    this.router.navigate(['/accountview/home',id])
   }
 
   isAuth(){
@@ -38,6 +47,7 @@ export class HeaderComponent implements OnInit {
 
   logout(){
     localStorage.clear();
+    this.router.navigate(['main'])
     const Toast = Swal.mixin({
       toast: true,
       position: 'top-end',
@@ -53,16 +63,4 @@ export class HeaderComponent implements OnInit {
       title: 'Adios, NOMBRE'
     });
   }
-
-
-  listarUsuario(){
-    this.userService.getUsuarios().subscribe(
-      res=>{
-        console.log(res);
-        this.ListarUsuario=<any>res;
-      },
-      err => console.log(err)
-    );
-  }
-
   }

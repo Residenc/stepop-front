@@ -1,5 +1,7 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { LoadScriptsService } from 'src/app/services/load-scripts/load-scripts.service';
+import { User, UsersService } from 'src/app/services/Users/users.service';
 
 @Component({
   selector: 'app-editprofile',
@@ -15,11 +17,45 @@ export class EditprofileComponent implements OnInit {
     @ViewChild('editPhone') botonPhone: ElementRef;
     @ViewChild('editButton') botonEdit: ElementRef;
 
-  constructor(private renderer2:Renderer2, private loadScripts:LoadScriptsService) {
+    usuario: User={
+      id_usuario:(''),
+      nombre_usuario:'',
+      apellidos:'',
+      email:'',
+      password:''
+    };
+  constructor(private renderer2:Renderer2, private loadScripts:LoadScriptsService,
+              private userService:UsersService,private router:Router,
+              private activeRoute:ActivatedRoute) {
     loadScripts.loadS(["tooltip"]);
   }
 
   ngOnInit(): void {
+
+    const params = this.activeRoute.snapshot.params;
+    console.log(params);
+    if (params.id) {
+      this.userService.getUsuario(params.id).subscribe(
+          res => {
+            console.log(res);
+            this.usuario = res;
+          },
+          err => console.log(err)
+        )
+    }
+  }
+
+  modificar()
+  {
+      this.userService.editUser(this.usuario.id_usuario, this.usuario).subscribe(
+      res=>{
+        console.log(res);
+      },
+      err=>{console.log(err)
+      }
+    );
+
+    this.router.navigate(['main']);
   }
 
   enabledBtn(){

@@ -20,7 +20,14 @@ export class UsersService {
   {
     return this.http.get(this.url +'/usuarios');
   }
+
+  editUser(id_user:string| undefined, user:User){
+    return this.http.put(this.url+'/update/'+id_user, user);
+  }
   
+  getUsuarioId(user:User){
+    return this.http.post(`${this.url}/getId`,user);
+  }
 
 }
 export interface User{

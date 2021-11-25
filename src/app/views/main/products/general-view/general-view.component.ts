@@ -28,8 +28,5 @@ export class GeneralViewComponent implements OnInit {
     )
   }
 
-  prueba(id_produc:undefined){
-    this.router.navigate(['viewproduct/'+ id_produc])
-  }
 
 }
