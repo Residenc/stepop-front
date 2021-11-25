@@ -26,6 +26,11 @@ export class ProductosService {
     return this.http.get(this.url +'/productos');
   }
   
+  //add
+  addProducto(producto:Producto){
+    return this.http.post(this.url+'/agregarProducto',producto)
+  }
+
   //get un producto
   
   getProducto(id_produc:string){
@@ -57,4 +62,5 @@ descripcion?: string | any;
 id_usuario?: string | any;
 id_empresa?: string | any;
 nombre_empresa?:string|any;
+imagen?:string|any;
     }

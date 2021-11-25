@@ -24,6 +24,7 @@ export class EditproductComponent implements OnInit {
     tipo:'',
     stock:'',
     descripcion:'',
+    imagen:''
   };
  
 

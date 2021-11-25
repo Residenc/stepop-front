@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -8,11 +9,16 @@ import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/co
 export class ProfileComponent implements OnInit {
 
 
-  constructor() {
+  constructor(private router:Router) {
 
   }
 
   ngOnInit(): void {
+  }
+  view(){
+    let id = localStorage.getItem('view');
+    console.log('Este es el Id', id)
+    this.router.navigate(['accountview/profile/editprofile',id])
   }
 
 

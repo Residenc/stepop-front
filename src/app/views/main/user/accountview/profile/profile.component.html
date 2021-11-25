@@ -2,7 +2,7 @@
 
     <ul class="nav nav-tabs tab-edit" id="myTab" role="tablist">
         <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/accountview/profile/editprofile']" [routerLinkActive]="'active'">
+            <a class="nav-link" (click)="view()" [routerLinkActive]="'active'">
                 <i class="d-inline bi bi-person-circle me-2"></i>
                 <p class="d-none d-md-inline">Perfil</p>
             </a>

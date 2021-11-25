@@ -10,21 +10,27 @@
                 <div class="profile-button position-absolute bottom-0 start-50 translate-middle-x d-md-block d-none">
                     <input type="file" id="selectedFile" style="display: none;" />
                     <button type="button" class="btn btn-photo-text" onclick="document.getElementById('selectedFile').click();">Imagen Del Producto</button>
+
                 </div>
-                <img src="../../../../../assets/images/insert-img.png" class="img-fluid" alt="Foto De Perfil" width="300" height="300">
+                <img [src]="previsualizacion" class="img-fluid" alt="Foto De Perfil" width="300" height="300">
             </div>
         </div>
-        <form class="col-12 col-lg-7">
+        <form class="col-12 col-lg-7" [formGroup]="newProduct" >
+            <input formControlName="imagen" (change)="capturarFile($event)" type="file">
+            
+            <!-- <div *ngIf="previsualizacion">
+                <img [src]="previsualizacion" alt="">
+            </div> -->
             <div class="mb-4 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
                 <label  class="col-12 col-md-3 col-lg-2 col-form-label product-label">Nombre:</label>
                 <div class="col-12 col-md-6 col-lg-8">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control"  formControlName="nombre">
                 </div>
             </div>
             <div class="mb-4 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
                 <label  class="col-12 col-md-3 col-lg-2 col-form-label product-label">Descripcion:</label>
                 <div class="col-12 col-md-6 col-lg-8">
-                    <textarea type="text" class="form-control" style="height: 100px"></textarea>
+                    <textarea type="text" class="form-control" style="height: 100px"  formControlName="descripcion"></textarea>
                 </div>
             </div>
             <div class="mb-4 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
@@ -70,7 +76,7 @@
             </div>
             <div class="mb-4 mt-4 mt-lg-0 d-flex justify-content-center align-items-center actions">
                 <button type="button" class="btn btn-secondary me-3" (click)="back()">Cancelar</button>
-                <button class="btn btn-primary">Agregar Producto</button>
+                <button class="btn btn-primary" (click)="onSubmit()">Agregar Producto</button>
             </div>
         </form>
     </div>

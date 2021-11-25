@@ -31,7 +31,6 @@ export class EditprofileComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
     const params = this.activeRoute.snapshot.params;
     console.log(params);
     if (params.id) {
