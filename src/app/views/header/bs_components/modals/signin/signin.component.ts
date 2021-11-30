@@ -16,6 +16,7 @@ export class SigninComponent implements OnInit {
     email: new FormControl('' ,[Validators.required]),
     password: new FormControl('',[Validators.required,Validators.minLength(7)])
   });
+  location: any;
   constructor(private authService:AuthenticationService,private router:Router,
     private userService:UsersService, private activeRoute :ActivatedRoute) { }
     
@@ -29,6 +30,7 @@ export class SigninComponent implements OnInit {
         localStorage.setItem('token',res.token);
         console.log(this.authForm.value)
         this.getId();
+        window.location.reload();
         //this.router.navigate(['accountview/home']);
         const Toast = Swal.mixin({
           toast: true,
