@@ -3,18 +3,20 @@
         <div class="modal-content" style="min-height: 500px;">
             <div class="modal-header" style="background-color: #f1f2f3;">
                 <ul class="nav nav-tabs card-header-tabs" role="tablist">
-                    <li class="nav-item">
+                    <li class="nav-item justify-content-center">
                         <a href="#signin-tab" class="nav-link active" data-bs-toggle="tab" role="tab" aria-selected="true">
                             <i class="d-inline bi bi-door-open me-2 mt-n1"></i>
                             <p class="d-none d-md-inline">Iniciar Sesion</p>
                         </a>
                     </li>
+                    <!--
                     <li class="nav-item">
                         <a href="#signup-tab" class="nav-link" data-bs-toggle="tab" role="tab" aria-selected="true">
                             <i class="d-inline bi bi-clipboard me-2 mt-n1"></i>
                             <p class="d-none d-md-inline">Registrarse</p>
                         </a>
                     </li>
+                    -->
                 </ul>
                 <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
@@ -39,10 +41,12 @@
                         <a class="fs-6 text-decoration-none" href="#" style="color: royalblue; font-weight: 500;">Olvidaste Tu Contraseña?</a>
                     </div>
 
-                    <button (click)="navigation()" type="submit" data-bs-dismiss="modal" class="btn btn-primary shadow-sm d-block w-75 mx-auto">Iniciar Sesion</button>
+                    <button (click)="navigation()" type="submit" data-bs-dismiss="modal" class="btn btn-primary shadow-sm d-block w-75 mx-auto mb-3">Iniciar Sesion</button>
+                    <button type="submit" data-bs-dismiss="modal" class="btn btn-purple shadow-sm d-block w-75 mx-auto">Registrate</button>
 
                 </form>
 
+                <!--
                 <form [formGroup]="registerForm" id="signup-tab" class="tab-pane fade flex-fill px-5" (ngSubmit)="onRegister()">
 
                     <div class="mb-3" >
@@ -73,6 +77,7 @@
                     <button type="submit" data-bs-dismiss="modal" class="btn btn-purple shadow-sm d-block w-75 mx-auto">Registrate</button>
 
                 </form>
+                -->
             </div>
         </div>
     </div>

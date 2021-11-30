@@ -1,6 +1,6 @@
 <div>
     <div class="container-fluid shadow rounded-3" style="background-color: #ffff;">
-        <div class="row d-flex justify-content-center gx-5 p-5">
+        <div class="row d-flex justify-content-center gx-5 p-0 p-md-3 p-xl-5">
 
             <div class="col-2 border rounded-3 py-3 animate__animated animate__fadeInLeft animate__faster d-none d-xl-block">
 
@@ -148,6 +148,9 @@
 
             <!--Columna de Filtros para Moviles-->
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrolling">
+                <div class="offcanvas-header d-flex justify-content-end">
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
                 <div class="offcanvas-body">
                     <ul class="nav flex-column">
                         <li class="nav-item">
@@ -335,13 +338,17 @@
                                             <span class="price d-block">$ {{producto.precio}}.<small>00</small></span>
                                             <small class="shipment d-block">Envio Gratis!</small>
                                         </div>
-                                        <div class="buttonsActions">
+                                        <div class="buttonsActions d-none d-xl-block">
                                             <a class="btn btn-sm btn-purple w-100 mb-2 d-block" href="#" routerLink="/checkout">Comprar Ahora</a>
                                             <button (click)=addtocart(producto) class="btn btn-sm btn-outline-success w-100 d-block" type="button"><i class="bi bi-cart-plus me-1"></i>Agregar Al Carrito</button>
                                         </div>  
+                                        <div class="buttonsActions d-block d-xl-none">
+                                            <a class="btn btn-sm btn-purple w-100 mb-2 d-block" href="#" routerLink="/checkout">Comprar</a>
+                                            <button (click)=addtocart(producto) class="btn btn-sm btn-outline-success w-100 d-block" type="button"><i class="bi bi-cart-plus me-1"></i>Agregar</button>
+                                        </div> 
                                     </div>
                                 </div>
-                                <div class="product-info d-flex justify-content-between px-3 my-3">
+                                <div class="product-info d-flex justify-content-between px-1 px-md-3 my-3">
                                     <small class="product-subcategory"><a href="#">Subcategoria</a></small>
                                     <small class="product-seller">Vendido Por :<a href="#" data-bs-toggle="tooltip" title="{{producto.nombre_empresa}}"> {{producto.nombre_empresa}}</a></small>
                                 </div>  
