@@ -10,6 +10,7 @@ import { AccountviewComponent } from './views/main/user/accountview/accountview.
 import { HomeComponent } from './views/main/user/accountview/home/home.component';
 import { ProfileComponent } from './views/main/user/accountview/profile/profile.component';
 import { FavsComponent } from './views/main/user/accountview/favs/favs.component';
+import { StoreprofileComponent } from './views/main/user/storeprofile/storeprofile.component';
 
 
 import { RegisterviewComponent } from './views/main/user/registerview/registerview.component';
@@ -108,7 +109,8 @@ const routes: Routes = [
   {path: 'viewproduct/:id', component:ViewProductComponent},
   {path: 'editproduct/:id', component: EditproductComponent},
   {path: 'addproduct', component: AddproductComponent},
-  {path: 'generalview', component:GeneralViewComponent}
+  {path: 'generalview', component:GeneralViewComponent},
+  {path: 'storeprofile', component:StoreprofileComponent}
 ];
 
 @NgModule({

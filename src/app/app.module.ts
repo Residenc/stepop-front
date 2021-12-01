@@ -46,6 +46,7 @@ import { QuickViewComponent } from './views/main/products/quick-view/quick-view.
 
 import{JwtHelperService, JWT_OPTIONS} from '@auth0/angular-jwt';
 import {LoadScriptsService} from "./services/load-scripts/load-scripts.service";
+import { StoreprofileComponent } from './views/main/user/storeprofile/storeprofile.component';
 
 @NgModule({
   declarations: [
@@ -78,6 +79,7 @@ import {LoadScriptsService} from "./services/load-scripts/load-scripts.service";
     GeneralViewComponent,
     QuickViewComponent,
     AddproductComponent,
+    StoreprofileComponent,
   ],
   imports: [
     BrowserModule,
