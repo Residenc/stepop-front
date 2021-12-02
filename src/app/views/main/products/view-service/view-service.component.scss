@@ -1,9 +1,6 @@
-#zoom-img {
-    width: 250px;
-    height: 250px;
-    background: url("../../../../../assets/images/59.jpg");
-    background-position: center;
-    background-size: cover;
+.img-service {
+    width: 200px !important;
+    height: 200px !important;
 }
 
 .product-label, h5{
@@ -11,12 +8,8 @@
     font-weight: bold;
 }
 
-.product-campo{
-    max-width: 80px !important;
-}
-
 @media (min-width: 992px) {
-    #zoom-img {
+    .img-service {
         width: 400px !important;
         height: 400px !important;
     }
