@@ -1,0 +1,23 @@
+#zoom-img {
+    width: 250px;
+    height: 250px;
+    background: url("../../../../../assets/images/59.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.product-label, h5{
+    letter-spacing: 0.1px;
+    font-weight: bold;
+}
+
+.product-campo{
+    max-width: 80px !important;
+}
+
+@media (min-width: 992px) {
+    #zoom-img {
+        width: 400px !important;
+        height: 400px !important;
+    }
+}

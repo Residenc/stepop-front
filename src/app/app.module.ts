@@ -39,14 +39,13 @@ import { EditproductComponent } from './views/main/user/accountview/products/edi
 import { AddproductComponent } from './views/main/user/accountview/products/addproduct/addproduct.component';
 
 import { ViewProductComponent } from './views/main/products/view-product/view-product.component';
-import { BestsellersComponent } from './views/main/products/view-categories/bestsellers/bestsellers.component';
-import { NewcomersComponent } from './views/main/products/view-categories/newcomers/newcomers.component';
 import { GeneralViewComponent } from './views/main/products/general-view/general-view.component';
 import { QuickViewComponent } from './views/main/products/quick-view/quick-view.component';
 
 import{JwtHelperService, JWT_OPTIONS} from '@auth0/angular-jwt';
 import {LoadScriptsService} from "./services/load-scripts/load-scripts.service";
 import { StoreprofileComponent } from './views/main/user/storeprofile/storeprofile.component';
+import { ViewServiceComponent } from './views/main/products/view-service/view-service.component';
 
 @NgModule({
   declarations: [
@@ -74,12 +73,11 @@ import { StoreprofileComponent } from './views/main/user/storeprofile/storeprofi
     EditpaysComponent,
     EditsuscriptionComponent,
     EditproductComponent,
-    BestsellersComponent,
-    NewcomersComponent,
     GeneralViewComponent,
     QuickViewComponent,
     AddproductComponent,
     StoreprofileComponent,
+    ViewServiceComponent,
   ],
   imports: [
     BrowserModule,

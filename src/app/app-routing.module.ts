@@ -14,7 +14,7 @@ import { StoreprofileComponent } from './views/main/user/storeprofile/storeprofi
 
 
 import { RegisterviewComponent } from './views/main/user/registerview/registerview.component';
-import { ViewProductComponent } from './views/main/products/view-product/view-product.component';
+
 import { MessagesComponent } from './views/main/user/accountview/messages/messages.component';
 import { ShoppinghistoryComponent } from './views/main/user/accountview/shoppinghistory/shoppinghistory.component';
 import { ProductsComponent } from './views/main/user/accountview/products/products.component';
@@ -28,6 +28,10 @@ import { EditproductComponent } from './views/main/user/accountview/products/edi
 import { AddproductComponent } from './views/main/user/accountview/products/addproduct/addproduct.component';
 
 import {GeneralViewComponent} from './views/main/products/general-view/general-view.component';
+import { ViewProductComponent } from './views/main/products/view-product/view-product.component';
+import { ViewServiceComponent } from './views/main/products/view-service/view-service.component';
+
+
 import { AuthGuard } from './guards/auth.guard';
 
 
@@ -106,11 +110,13 @@ const routes: Routes = [
   },
 
   {path: 'registerview', component:RegisterviewComponent},
-  {path: 'viewproduct/:id', component:ViewProductComponent},
   {path: 'editproduct/:id', component: EditproductComponent},
   {path: 'addproduct', component: AddproductComponent},
+  {path: 'storeprofile', component:StoreprofileComponent},
+
   {path: 'generalview', component:GeneralViewComponent},
-  {path: 'storeprofile', component:StoreprofileComponent}
+  {path: 'viewservice', component:ViewServiceComponent},
+  {path: 'viewproduct/:id', component:ViewProductComponent}
 ];
 
 @NgModule({
