@@ -1,6 +1,6 @@
 <div class="container shadow p-4 p-md-5 my-5 rounded-3" style="background-color: rgb(255,255,255);">
     <h2 class="display-4 text-center mb-3">Termina Tu Proceso De Registro</h2>
-    <form class="border-top border-1">
+    <form [formGroup]="newUser" class="border-top border-1" (ngSubmit)="onSubmit()">
 
         <div class="row mb-4 mt-5">
             <div class="row mb-2">
@@ -8,18 +8,14 @@
             </div>
             <div class="row mb-0 mb-xl-3">
                 <div class="col-12 col-xl-3 col-md-6 mb-3 mb-xl-0">
-                    <input type="text" class="form-control" id="nombres" placeholder="Nombre(s)">
+                    <input type="text" class="form-control" id="nombres" placeholder="Nombre(s)"  formControlName="nombre_usuario">
                 </div>
 
                 <div class="col-12 col-xl-3 col-md-6 mb-3 mb-xl-0">
-                    <input type="text" class="form-control" id="apellidop" placeholder="Apellido Paterno">
+                    <input type="text" class="form-control" id="apellidop" placeholder="Apellidos"  formControlName="apellidos">
                 </div>
 
-                <div class="col-12 col-xl-3 col-md-6 mb-3 mb-xl-0">
-                    <input type="text" class="form-control" id="apellidom" placeholder="Apellido Materno">
-                </div>
-
-                <div class="col-12 col-xl-3 col-md-6 mb-3 mb-xl-0 text-center align-self-center">
+             <!--   <div class="col-12 col-xl-3 col-md-6 mb-3 mb-xl-0 text-center align-self-center">
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="sexo" id="opmasculino" value="option1" checked>
                         <label class="form-check-label" for="opmasculino">Masculino</label>
@@ -28,17 +24,17 @@
                         <input class="form-check-input" type="radio" name="sexo" id="opfemenino" value="option2">
                         <label class="form-check-label" for="opfemenino">Femenino</label>
                     </div>
-                </div>
+                </div>-->
             </div>
             <div class="row mb-0 mb-xl-3">
                 <div class="col-12 col-xl-6 mb-3 mb-xl-0">
                     <div class="row g-0">
-                        <div class="col-4">
+                     <!--   <div class="col-4">
                             <label for="fechanacim" class="col-form-label">Fecha De Nacimiento</label>
                         </div>
                         <div class="col">
                           <input type="date" class="form-control" id="fechanacim">
-                        </div>
+                        </div>-->
                     </div>
                 </div>
 
@@ -47,16 +43,16 @@
                 </div>
 
                 <div class="col-12 col-xl-3 col-md-6 mb-3 mb-xl-0">
-                    <input type="text" class="form-control" id="telefonoc" placeholder="Telefono Celular (10 Digitos)">
+                    <input type="text" class="form-control" id="telefonoc" placeholder="Telefono Celular (10 Digitos)"  formControlName="telefono">
                 </div>
 
             </div>
             <div class="row">        
                 <div class="col-12 col-xl-6 mb-3 mb-xl-0">
-                    <input type="email" class="form-control" id="correo" placeholder="Correo Electronico">
+                    <input type="email" class="form-control" id="correo" placeholder="Correo Electronico" formControlName="email">
                 </div>
                 <div class="col-12 col-xl-3 col-md-6 mb-3 mb-xl-0">
-                    <input type="email" class="form-control" id="passwd1" placeholder="Contraseña">
+                    <input type="email" class="form-control" id="passwd1" placeholder="Contraseña"  formControlName="password">
                 </div>
                 <div class="col-12 col-xl-3 col-md-6 mb-3 mb-xl-0">
                     <input type="email" class="form-control" id="passwd2" placeholder="Confirmar Contraseña">
@@ -71,24 +67,24 @@
             </div>
             <div class="row mb-0 mb-xl-3">
                 <div class="col-12 col-md-6 col-xl-8 mb-3 mb-xl-0">
-                    <input type="text" class="form-control" id="calle" placeholder="Calle">
+                    <input type="text" class="form-control" id="calle" placeholder="Calle" formControlName="calle">
                 </div>
 
                 <div class="col-6 col-md-3 col-xl-2 mb-3 mb-xl-0">
-                    <input type="text" class="form-control" id="numeroext" placeholder="Numero Exterior">
+                    <input type="text" class="form-control" id="numeroext" placeholder="Numero Exterior" formControlName="no_exterior">
                 </div>
 
                 <div class="col-6 col-md-3 col-xl-2 mb-3 mb-xl-0">
-                    <input type="text" class="form-control" id="numeroint" placeholder="Numero Interior">
+                    <input type="text" class="form-control" id="numeroint" placeholder="Numero Interior" formControlName="no_interior">
                 </div>
             </div>
             <div class="row mb-0 mb-xl-3">
                 <div class="col-12 col-md-5 mb-3 mb-xl-0">
-                    <input type="text" class="form-control" id="calle2" placeholder="Entre Calle">
+                    <input type="text" class="form-control" id="calle2" placeholder="Entre Calle" formControlName="entre_calle">
                 </div>
 
                 <div class="col-12 col-md-5 mb-3 mb-xl-0">
-                    <input type="text" class="form-control" id="calle2" placeholder="Y Calle">
+                    <input type="text" class="form-control" id="calle2" placeholder="Y Calle" formControlName="y_calle">
                 </div>
 
                 <div class="col-12 col-md-2 mb-3 mb-xl-0">
@@ -213,10 +209,11 @@
               </div>
             </div>
         </div>
-    </form>
-    <div class="row justify-content-center align-items-center">
-        <div class="col-auto">
-            <input type="submit" class="btn btn-purple" routerLink="/accountview" value="Registrarse">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-auto">
+                <input type="submit" class="btn btn-purple"  value="Registrarse">
+            </div>
         </div>
-    </div>
+    </form>
+   
 </div>

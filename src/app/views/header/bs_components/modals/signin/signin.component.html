@@ -42,9 +42,9 @@
                     </div>
 
                     <button (click)="navigation()" type="submit" data-bs-dismiss="modal" class="btn btn-primary shadow-sm d-block w-75 mx-auto mb-3">Iniciar Sesion</button>
-                    <button type="submit" data-bs-dismiss="modal" class="btn btn-purple shadow-sm d-block w-75 mx-auto">Registrate</button>
 
                 </form>
+                <button [routerLink]="['registerview']" data-bs-dismiss="modal" class="btn btn-purple shadow-sm d-block w-75 mx-auto">Registrate</button>
 
                 <!--
                 <form [formGroup]="registerForm" id="signup-tab" class="tab-pane fade flex-fill px-5" (ngSubmit)="onRegister()">

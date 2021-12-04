@@ -36,4 +36,10 @@ export interface User{
   apellidos?:string | any;
   email?:string | any;
   password?:string | any;
+  telefono?:number | any;
+  calle?:string| any;
+  entre_calle?:string| any;
+  y_calle?:string| any;
+  no_interior?:string| any;
+  no_exterior?:string| any;
 }
