@@ -1,84 +1,354 @@
 <div class="home-tab animate__animated animate__zoomIn animate__faster">
 
-    <h2 class="display-6">Resumen</h2>
-    <hr class="mb-5">
-    <div class="row d-flex justify-content-evenly align-items-center mb-3 mb-lg-5">
-        <div class="col-auto p-2 img-thumbnail rounded bg-light">
-
-            <div class="profile-photo position-relative">
-                <div class="profile-button position-absolute top-0 end-0 d-md-none d-block">
-                    <input type="file" id="selectedFile" style="display: none;" />
-                    <button type="button" class="btn btn-photo-icon" onclick="document.getElementById('selectedFile').click();" data-bs-toggle="tooltip" data-bs-placement="top" title="Cambiar Foto De Perfil"><i class="bi bi-pencil-square"></i></button>
+    <section class="row p-2 p-lg-5">
+        <div class="col">
+            <div class="row d-flex justify-content-center justify-content-xl-between mb-3 mb-lg-5">
+                <h2 class="display-6">Resumen</h2>
+                <hr class="mb-5">
+        
+                <div class="col-auto p-3 img-thumbnail rounded bg-light mb-4 mb-xl-0">
+        
+                    <div class="profile-photo position-relative">
+                        <div class="profile-button position-absolute top-0 end-0 d-md-none d-block">
+                            <input type="file" id="selectedFile" style="display: none;" />
+                            <button type="button" class="btn btn-photo-icon" onclick="document.getElementById('selectedFile').click();" data-bs-toggle="tooltip" data-bs-placement="top" title="Cambiar Foto De Perfil"><i class="bi bi-pencil-square"></i></button>
+                        </div>
+                        <div class="profile-button position-absolute bottom-0 start-50 translate-middle-x d-md-block d-none">
+                            <input type="file" id="selectedFile" style="display: none;" />
+                            <button type="button" class="btn btn-photo-text" onclick="document.getElementById('selectedFile').click();">Cambiar Foto</button>
+                        </div>
+                        <img src="../../../../../assets/images/profile1.jpg" class="img-fluid" alt="Foto De Perfil" width="250" height="250">
+                    </div>
+        
                 </div>
-                <div class="profile-button position-absolute bottom-0 start-50 translate-middle-x d-md-block d-none">
-                    <input type="file" id="selectedFile" style="display: none;" />
-                    <button type="button" class="btn btn-photo-text" onclick="document.getElementById('selectedFile').click();">Cambiar Foto</button>
+        
+                <div  class="col-12 col-xl-7 col-xxl-8 align-self-center">
+                    <div class="mb-3 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
+                        <label for="user-name" class="col-12 col-lg-3 col-form-label user-label">Nombre:</label>
+                        <div class="col-12 col-lg-8 col-xl-9">
+                        <input [(ngModel)]="usuario.nombre_usuario" type="text" readonly class="form-control user-campo" id="user-name" value="Yorman Jesus Rojas Martinez" disabled>
+                        </div>
+                    </div>
+                    <div class="mb-3 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
+                        <label for="user-email" class="col-12 col-lg-3 col-form-label user-label">Email:</label>
+                        <div class="col-12 col-lg-8 col-xl-9">
+                        <input [(ngModel)]="usuario.email" type="email" readonly class="form-control user-campo" id="user-email" value="l161080213@iztapalapa.tecnm.mx" disabled>
+                        </div>
+                    </div>
+                    <div class="mb-3 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
+                        <label for="user-phone" class="col-12 col-lg-3 col-form-label user-label">Telefono:</label>
+                        <div class="col-12 col-lg-8 col-xl-9">
+                        <input type="text" readonly class="form-control user-campo" id="user-phone" value="5584126053" disabled>
+                        </div>
+                    </div>
                 </div>
-                <img src="../../../../../assets/images/profile1.jpg" class="img-fluid" alt="Foto De Perfil" width="250" height="250">
             </div>
-
+            <div class="row">
+                <div class="col-12">
+                    <div class="mb-3 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
+                        <label for="user-address" class="col-12 col-lg-3 col-form-label user-label">Direccion Principal:</label>
+                        <div class="col-12 col-lg-8 col-xl-9">
+                        <input type="text" readonly class="form-control user-campo" id="user-address" value="Agustin Olachea Alvarez #504, Col. Hidalgo, CP.16798, Alc. Alvaro Obregon, CDMX" disabled>
+                        </div>
+                    </div>
+                    <div class="mb-3 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
+                        <label for="user-pay" class="col-12 col-lg-3 col-form-label user-label">Metodo De Pago Principal:</label>
+                        <div class="col-12 col-lg-8 col-xl-9">
+                        <input type="email" readonly class="form-control user-campo" id="user-pay" value="Cuenta Asociada de Paypal" disabled>
+                        </div>
+                    </div>
+                    <div class="mb-3 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
+                        <label for="user-type" class="col-12 col-lg-3 col-form-label user-label">Tipo De Cuenta:</label>
+                        <div class="col-12 col-lg-8 col-xl-9">
+                        <input type="text" readonly class="form-control user-campo" id="user-type" value="Gratuito/Asociado" disabled>
+                        </div>
+                    </div>
+                    <div class="mb-3 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
+                        <label for="user-group" class="col-12 col-lg-3 col-form-label user-label">Empresa (Registrados):</label>
+                        <div class="col-12 col-lg-8 col-xl-9">
+                        <input type="text" readonly class="form-control user-campo" id="user-group" value="Nombre empresa" disabled>
+                        </div>
+                    </div>
+                    <div class="mb-3 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
+                        <label for="user-datesuscripcion" class="col-12 col-lg-3 col-form-label user-label">Proximo Pago:(Registrados):</label>
+                        <div class="col-12 col-lg-8 col-xl-9">
+                        <input type="date" readonly class="form-control user-campo" id="user-datesuscripcion" value="2022-07-22" disabled>
+                        </div>
+                    </div>
+                    <div class="mb-3 mt-4 mt-lg-5 row d-flex justify-content-center align-items-center">
+                        <div class="col-12 col-md-auto text-center">
+                            <button class="btn btn-purple">Asociate! (Gratuitos)</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div  class="col-12 col-lg-7">
-            <div class="mb-3 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
-                <label for="user-name" class="col-12 col-md-3 col-lg-4 col-form-label user-label">Nombre:</label>
-                <div class="col-12 col-md-6 col-lg-8">
-                <input [(ngModel)]="usuario.nombre_usuario" type="text" readonly class="form-control user-campo" id="user-name" value="Yorman Jesus Rojas Martinez" disabled>
-                </div>
-            </div>
-            <div class="mb-3 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
-                <label for="user-email" class="col-12 col-md-3 col-lg-4 col-form-label user-label">Email:</label>
-                <div class="col-12 col-md-6 col-lg-8">
-                <input [(ngModel)]="usuario.email" type="email" readonly class="form-control user-campo" id="user-email" value="l161080213@iztapalapa.tecnm.mx" disabled>
-                </div>
-            </div>
-            <div class="mb-3 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
-                <label for="user-phone" class="col-12 col-md-3 col-lg-4 col-form-label user-label">Telefono:</label>
-                <div class="col-12 col-md-6 col-lg-8">
-                <input type="text" readonly class="form-control user-campo" id="user-phone" value="5584126053" disabled>
-                </div>
+    <!--Anuncios Desktop-->
+    <section class="anunciosWidget-Desktop d-none d-xl-block">
+        <div class="row mb-1 controls">
+            <div class="d-flex justify-content-end">
+                <button class="btn p-0 me-4" type="button" data-bs-target="#carouselAnunciosDesktop" data-bs-slide="prev">
+                    <i class="bi bi-arrow-left-circle"></i>
+                </button>
+                <button class="btn p-0" type="button" data-bs-target="#carouselAnunciosDesktop" data-bs-slide="next">
+                    <i class="bi bi-arrow-right-circle"></i>
+                </button>
             </div>
         </div>
-    </div>
-    <div class="row d-flex justify-content-evenly align-items-center">
-        <div class="col-12 col-lg-7">
-            <div class="mb-3 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
-                <label for="user-address" class="col-12 col-md-3 col-lg-4 col-form-label user-label">Direccion Principal:</label>
-                <div class="col-12 col-md-6 col-lg-8">
-                <input type="text" readonly class="form-control user-campo" id="user-address" value="Agustin Olachea Alvarez #504, Col. Hidalgo, CP.16798, Alc. Alvaro Obregon, CDMX" disabled>
+        <div id="carouselAnunciosDesktop" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+             <div class="carousel-item active" data-bs-interval="3000">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card d-flex-inline text-dark bg-light">
+                            <div class="card-body">
+                                <h5 class="card-title">Anuncio</h5>
+                                <p class="card-text">DESCRIPCION DEL ANUNCIO: Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus fugit facere facilis molestiae ad dolorem, id illum. Dolores, quisquam totam!</p>
+                                <div class="d-flex justify-content-center">
+                                    <a href="#" class="btn btn-secondary">Ver Mas</a>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-flex justify-content-between">
+                                    <small class="text-muted" style="font-size: 10px;">Publicado el: FECHA</small>
+                                    <small class="text-muted" style="font-size: 10px;">Por: AUTOR</small>
+                                </div>
+                  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card d-flex-inline text-dark bg-light">
+                            <div class="card-body">
+                                <h5 class="card-title">Anuncio</h5>
+                                <p class="card-text">DESCRIPCION DEL ANUNCIO: Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus fugit facere facilis molestiae ad dolorem, id illum. Dolores, quisquam totam!</p>
+                                <div class="d-flex justify-content-center">
+                                    <a href="#" class="btn btn-secondary">Ver Mas</a>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-flex justify-content-between">
+                                    <small class="text-muted" style="font-size: 10px;">Publicado el: FECHA</small>
+                                    <small class="text-muted" style="font-size: 10px;">Por: AUTOR</small>
+                                </div>
+                  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card d-flex-inline text-dark bg-light">
+                            <div class="card-body">
+                                <h5 class="card-title">Anuncio</h5>
+                                <p class="card-text">DESCRIPCION DEL ANUNCIO: Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus fugit facere facilis molestiae ad dolorem, id illum. Dolores, quisquam totam!</p>
+                                <div class="d-flex justify-content-center">
+                                    <a href="#" class="btn btn-secondary">Ver Mas</a>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-flex justify-content-between">
+                                    <small class="text-muted" style="font-size: 10px;">Publicado el: FECHA</small>
+                                    <small class="text-muted" style="font-size: 10px;">Por: AUTOR</small>
+                                </div>
+                  
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="mb-3 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
-                <label for="user-pay" class="col-12 col-md-3 col-lg-4 col-form-label user-label">Metodo De Pago Principal:</label>
-                <div class="col-12 col-md-6 col-lg-8">
-                <input type="email" readonly class="form-control user-campo" id="user-pay" value="Cuenta Asociada de Paypal" disabled>
+             </div>
+             <div class="carousel-item" data-bs-interval="3000">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card d-flex-inline text-dark bg-light">
+                            <div class="card-body">
+                                <h5 class="card-title">Anuncio</h5>
+                                <p class="card-text">DESCRIPCION DEL ANUNCIO: Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus fugit facere facilis molestiae ad dolorem, id illum. Dolores, quisquam totam!</p>
+                                <div class="d-flex justify-content-center">
+                                    <a href="#" class="btn btn-secondary">Ver Mas</a>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-flex justify-content-between">
+                                    <small class="text-muted" style="font-size: 10px;">Publicado el: FECHA</small>
+                                    <small class="text-muted" style="font-size: 10px;">Por: AUTOR</small>
+                                </div>
+                  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card d-flex-inline text-dark bg-light">
+                            <div class="card-body">
+                                <h5 class="card-title">Anuncio</h5>
+                                <p class="card-text">DESCRIPCION DEL ANUNCIO: Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus fugit facere facilis molestiae ad dolorem, id illum. Dolores, quisquam totam!</p>
+                                <div class="d-flex justify-content-center">
+                                    <a href="#" class="btn btn-secondary">Ver Mas</a>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-flex justify-content-between">
+                                    <small class="text-muted" style="font-size: 10px;">Publicado el: FECHA</small>
+                                    <small class="text-muted" style="font-size: 10px;">Por: AUTOR</small>
+                                </div>
+                  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card d-flex-inline text-dark bg-light">
+                            <div class="card-body">
+                                <h5 class="card-title">Anuncio</h5>
+                                <p class="card-text">DESCRIPCION DEL ANUNCIO: Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus fugit facere facilis molestiae ad dolorem, id illum. Dolores, quisquam totam!</p>
+                                <div class="d-flex justify-content-center">
+                                    <a href="#" class="btn btn-secondary">Ver Mas</a>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-flex justify-content-between">
+                                    <small class="text-muted" style="font-size: 10px;">Publicado el: FECHA</small>
+                                    <small class="text-muted" style="font-size: 10px;">Por: AUTOR</small>
+                                </div>
+                  
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="mb-3 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
-                <label for="user-type" class="col-12 col-md-3 col-lg-4 col-form-label user-label">Tipo De Cuenta:</label>
-                <div class="col-12 col-md-6 col-lg-8">
-                <input type="text" readonly class="form-control user-campo" id="user-type" value="Gratuito/Asociado" disabled>
-                </div>
-            </div>
-            <div class="mb-3 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
-                <label for="user-group" class="col-12 col-md-3 col-lg-4 col-form-label user-label">Empresa (Registrados):</label>
-                <div class="col-12 col-md-6 col-lg-8">
-                <input type="text" readonly class="form-control user-campo" id="user-group" value="Nombre empresa" disabled>
-                </div>
-            </div>
-            <div class="mb-3 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
-                <label for="user-datesuscripcion" class="col-12 col-md-3 col-lg-4 col-form-label user-label">Proximo Pago:(Registrados):</label>
-                <div class="col-12 col-md-6 col-lg-8">
-                <input type="date" readonly class="form-control user-campo" id="user-datesuscripcion" value="2022-07-22" disabled>
-                </div>
-            </div>
-            <div class="mb-3 mt-4 mt-lg-5 row d-flex justify-content-center align-items-center">
-                <div class="col-12 col-md-auto text-center">
-                    <button class="btn btn-purple">Asociate! (Gratuitos)</button>
-                </div>
+             </div>
+        </div>
+        </div>
+    </section>
+
+    <!--Anuncions Mobile-->
+    <section class="anunciosWidget-Mobile d-block d-xl-none">
+        <div class="row mb-1 controls">
+            <div class="d-flex justify-content-end">
+                <button class="btn p-0 me-4" type="button" data-bs-target="#carouselAnunciosMobile" data-bs-slide="prev">
+                    <i class="bi bi-arrow-left-circle"></i>
+                </button>
+                <button class="btn p-0" type="button" data-bs-target="#carouselAnunciosMobile" data-bs-slide="next">
+                    <i class="bi bi-arrow-right-circle"></i>
+                </button>
             </div>
         </div>
+        <div id="carouselAnunciosMobile" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                     <div class="carousel-item active" data-bs-interval="8000">
+                         <div class="card d-flex-inline text-dark bg-light">
+                             <div class="card-body">
+                                 <h5 class="card-title">Anuncio</h5>
+                                 <p class="card-text">DESCRIPCION DEL ANUNCIO: Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus fugit facere facilis molestiae ad dolorem, id illum. Dolores, quisquam totam!</p>
+                                 <div class="d-flex justify-content-center">
+                                     <a href="#" class="btn btn-secondary">Ver Mas</a>
+                                 </div>
+                             </div>
+                             <div class="card-footer">
+                                 <div class="d-flex justify-content-between">
+                                     <small class="text-muted" style="font-size: 10px;">Publicado el: FECHA</small>
+                                     <small class="text-muted" style="font-size: 10px;">Por: AUTOR</small>
+                                 </div>
+                   
+                             </div>
+                         </div>
+                     </div>
+                     <div class="carousel-item" data-bs-interval="8000">
+                         <div class="card d-flex-inline text-dark bg-light">
+                             <div class="card-body">
+                                 <h5 class="card-title">Anuncio</h5>
+                                 <p class="card-text">DESCRIPCION DEL ANUNCIO: Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus fugit facere facilis molestiae ad dolorem, id illum. Dolores, quisquam totam!</p>
+                                 <div class="d-flex justify-content-center">
+                                     <a href="#" class="btn btn-secondary">Ver Mas</a>
+                                 </div>
+                             </div>
+                             <div class="card-footer">
+                                 <div class="d-flex justify-content-between">
+                                     <small class="text-muted" style="font-size: 10px;">Publicado el: FECHA</small>
+                                     <small class="text-muted" style="font-size: 10px;">Por: AUTOR</small>
+                                 </div>
+                   
+                             </div>
+                         </div>
+                     </div>
+                     <div class="carousel-item" data-bs-interval="8000">
+                         <div class="card d-flex-inline text-dark bg-light">
+                             <div class="card-body">
+                                 <h5 class="card-title">Anuncio</h5>
+                                 <p class="card-text">DESCRIPCION DEL ANUNCIO: Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus fugit facere facilis molestiae ad dolorem, id illum. Dolores, quisquam totam!</p>
+                                 <div class="d-flex justify-content-center">
+                                     <a href="#" class="btn btn-secondary">Ver Mas</a>
+                                 </div>
+                             </div>
+                             <div class="card-footer">
+                                 <div class="d-flex justify-content-between">
+                                     <small class="text-muted" style="font-size: 10px;">Publicado el: FECHA</small>
+                                     <small class="text-muted" style="font-size: 10px;">Por: AUTOR</small>
+                                 </div>
+                   
+                             </div>
+                         </div>
+                     </div>
+                     <div class="carousel-item" data-bs-interval="8000">
+                         <div class="card d-flex-inline text-dark bg-light">
+                             <div class="card-body">
+                                 <h5 class="card-title">Anuncio</h5>
+                                 <p class="card-text">DESCRIPCION DEL ANUNCIO: Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus fugit facere facilis molestiae ad dolorem, id illum. Dolores, quisquam totam!</p>
+                                 <div class="d-flex justify-content-center">
+                                     <a href="#" class="btn btn-secondary">Ver Mas</a>
+                                 </div>
+                             </div>
+                             <div class="card-footer">
+                                 <div class="d-flex justify-content-between">
+                                     <small class="text-muted" style="font-size: 10px;">Publicado el: FECHA</small>
+                                     <small class="text-muted" style="font-size: 10px;">Por: AUTOR</small>
+                                 </div>
+                   
+                             </div>
+                         </div>
+                     </div>
+                     <div class="carousel-item" data-bs-interval="8000">
+                         <div class="card d-flex-inline text-dark bg-light">
+                             <div class="card-body">
+                                 <h5 class="card-title">Anuncio</h5>
+                                 <p class="card-text">DESCRIPCION DEL ANUNCIO: Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus fugit facere facilis molestiae ad dolorem, id illum. Dolores, quisquam totam!</p>
+                                 <div class="d-flex justify-content-center">
+                                     <a href="#" class="btn btn-secondary">Ver Mas</a>
+                                 </div>
+                             </div>
+                             <div class="card-footer">
+                                 <div class="d-flex justify-content-between">
+                                     <small class="text-muted" style="font-size: 10px;">Publicado el: FECHA</small>
+                                     <small class="text-muted" style="font-size: 10px;">Por: AUTOR</small>
+                                 </div>
+                   
+                             </div>
+                         </div>
+                     </div>
+                     <div class="carousel-item" data-bs-interval="8000">
+                         <div class="card d-flex-inline text-dark bg-light">
+                             <div class="card-body">
+                                 <h5 class="card-title">Anuncio</h5>
+                                 <p class="card-text">DESCRIPCION DEL ANUNCIO: Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus fugit facere facilis molestiae ad dolorem, id illum. Dolores, quisquam totam!</p>
+                                 <div class="d-flex justify-content-center">
+                                     <a href="#" class="btn btn-secondary">Ver Mas</a>
+                                 </div>
+                             </div>
+                             <div class="card-footer">
+                                 <div class="d-flex justify-content-between">
+                                     <small class="text-muted" style="font-size: 10px;">Publicado el: FECHA</small>
+                                     <small class="text-muted" style="font-size: 10px;">Por: AUTOR</small>
+                                 </div>
+                   
+                             </div>
+                         </div>
+                     </div>
+                </div>
+        </div>
+    </section>
 
+</div>
+
+
+<!--
         <div class="col-12 col-lg-4">
             <div class="mb-3 mt-4 mt-lg-0 row d-flex justify-content-center align-items-center">
                 <div class="form-floating">
@@ -107,7 +377,5 @@
                 </div>
             </div>
         </div>
-    </div>
 
-
-</div>
+-->

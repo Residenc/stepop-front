@@ -67,5 +67,16 @@
             padding-left: 30px;
         }
     }
-    
+
+    .controls{
+        button{
+            &:focus {
+                border:none;
+                box-shadow:none;
+            }
+            i{
+                font-size: 25px;
+            }
+        }
+    }
 }
