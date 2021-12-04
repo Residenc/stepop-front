@@ -94,10 +94,11 @@
             <div class="row mb-0 mb-xl-3">
                 <div class="col-12 col-md-6 col-xl-4 mb-3 mb-xl-0">
                     <select name="edo" id="edo" class="form-select d-block w-100">
-                        <option value="">Seleccionar Estado o Entidad</option>
-                        <option value="cdmx">Ciudad De México</option>
+                        <option value="" *ngFor="let estado of ListarEstado">{{estado.nombre}}</option>
+                        
+                       <!-- <option value="cdmx">Ciudad De México</option>
                         <option value="toluca">Toluca</option>
-                        <option value="cuernavaca">Cuernavaca</option>
+                        <option value="cuernavaca">Cuernavaca</option>-->
                     </select>
                 </div>
 
@@ -109,7 +110,7 @@
 
                 <div class="col-12 col-md-6 col-xl-4 mb-3 mb-xl-0">
                     <select name="local" id="local" class="form-select d-block w-100">
-                        <option value="">Seleccionar Colonia</option>
+                        <option value="" *ngFor="let colonia of ListarColonia">{{colonia.nombre}}</option>
                     </select>
                 </div>
             </div>
