@@ -1,0 +1,23 @@
+.shoppinghistory-tab{
+    .listaProductos{
+        .listaProducto{
+            background:#f8f8f8;
+            
+            .descripcionProducto{
+                .img-product{
+                    max-width: 104px;
+                    max-height: 104px;
+                }
+            }
+            .icon-edit{
+                color: rgb(0, 0, 0);
+            }
+            .icon-drop{
+                color: rgb(255, 50, 50);
+            }
+            &:nth-child(odd){
+                background: #e0cff3;
+            }
+        }
+    }
+}

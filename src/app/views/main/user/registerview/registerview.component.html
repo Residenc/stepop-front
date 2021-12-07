@@ -1,17 +1,17 @@
-<div class="container shadow p-4 p-md-5 my-5 rounded-3" style="background-color: rgb(255,255,255);">
+<div class="container-lg my-0 my-lg-5 px-0 px-lg-5 py-5 shadow rounded-3" style="background-color: rgb(255,255,255);">
     <h2 class="display-4 text-center mb-3">Termina Tu Proceso De Registro</h2>
     <form [formGroup]="newUser" class="border-top border-1" (ngSubmit)="onSubmit()">
 
-        <div class="row mb-4 mt-5">
+        <div class="row mb-4 mt-5 justify-content-center">
             <div class="row mb-2">
                 <h4 class="display-6">Datos Personales</h4>
             </div>
             <div class="row mb-0 mb-xl-3">
-                <div class="col-12 col-xl-3 col-md-6 mb-3 mb-xl-0">
+                <div class="col-12 col-xl-6 col-md-6 mb-3 mb-xl-0">
                     <input type="text" class="form-control" id="nombres" placeholder="Nombre(s)"  formControlName="nombre_usuario">
                 </div>
 
-                <div class="col-12 col-xl-3 col-md-6 mb-3 mb-xl-0">
+                <div class="col-12 col-xl-6 col-md-6 mb-3 mb-xl-0">
                     <input type="text" class="form-control" id="apellidop" placeholder="Apellidos"  formControlName="apellidos">
                 </div>
 
@@ -27,22 +27,22 @@
                 </div>-->
             </div>
             <div class="row mb-0 mb-xl-3">
-                <div class="col-12 col-xl-6 mb-3 mb-xl-0">
+                <!--<div class="col-12 col-xl-6 mb-3 mb-xl-0">
                     <div class="row g-0">
-                     <!--   <div class="col-4">
+                        <div class="col-4">
                             <label for="fechanacim" class="col-form-label">Fecha De Nacimiento</label>
                         </div>
                         <div class="col">
                           <input type="date" class="form-control" id="fechanacim">
-                        </div>-->
+                        </div>
                     </div>
-                </div>
+                </div>-->
 
-                <div class="col-12 col-xl-3 col-md-6 mb-3 mb-xl-0">
+                <div class="col-12 col-xl-6 col-md-6 mb-3 mb-xl-0">
                     <input type="text" class="form-control" id="telefonof" placeholder="Telefono Fijo (10 Digitos)">
                 </div>
 
-                <div class="col-12 col-xl-3 col-md-6 mb-3 mb-xl-0">
+                <div class="col-12 col-xl-6 col-md-6 mb-3 mb-xl-0">
                     <input type="text" class="form-control" id="telefonoc" placeholder="Telefono Celular (10 Digitos)"  formControlName="telefono">
                 </div>
 
@@ -60,7 +60,7 @@
             </div>
         </div>
 
-        <div class="row mb-4">
+        <div class="row mb-4 justify-content-center">
 
             <div class="row mb-2">
                 <h4 class="display-6">Domicilio</h4>
@@ -125,7 +125,7 @@
         
         </div>
 
-        <div class="row mb-4">
+        <div class="row mb-4 justify-content-center">
             <div class="col-12 col-md-6 col-xl-4 mb-3 mb-xl-0">
                 <div class="row text-center mb-2">
                     <h4 class="display-6">Tipo De Cuenta</h4>

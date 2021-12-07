@@ -23,7 +23,7 @@ table{
     }
     tbody{
         tr{
-            background: #f2e6ff;
+            background: #e0cff3;
             td{
                 font-size: 15px;
                 button{
@@ -51,7 +51,7 @@ table{
                 }
             }
             &:nth-child(even) {
-                background:#ededed;
+                background:#f8f8f8;
                 th, td{
                     color: rgb(0, 0, 0);
                 }

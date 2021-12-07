@@ -17,8 +17,10 @@ import { RegisterviewComponent } from './views/main/user/registerview/registervi
 
 import { MessagesComponent } from './views/main/user/accountview/messages/messages.component';
 import { ShoppinghistoryComponent } from './views/main/user/accountview/shoppinghistory/shoppinghistory.component';
+import { ViewPurchaseComponent } from './views/main/user/accountview/shoppinghistory/view-purchase/view-purchase.component';
 import { ProductsComponent } from './views/main/user/accountview/products/products.component';
 import { SaleshistoryComponent } from './views/main/user/accountview/saleshistory/saleshistory.component';
+import { ViewSaleComponent } from './views/main/user/accountview/saleshistory/view-sale/view-sale.component';
 import { AssociatesComponent } from './views/main/user/accountview/associates/associates.component';
 import { EditprofileComponent } from './views/main/user/accountview/profile/tabs/editprofile/editprofile.component';
 import { EditaddressComponent } from './views/main/user/accountview/profile/tabs/editaddress/editaddress.component';
@@ -92,7 +94,13 @@ const routes: Routes = [
       },
       {
         path: 'shoppinghistory',
-        component: ShoppinghistoryComponent
+        component: ShoppinghistoryComponent,
+        children: [
+          {
+            path: 'viewpurchase',
+            component: ViewPurchaseComponent
+          }
+        ]
       },
       {
         path: 'products',
@@ -100,7 +108,13 @@ const routes: Routes = [
       },
       {
         path: 'saleshistory',
-        component: SaleshistoryComponent
+        component: SaleshistoryComponent,
+        children: [
+          {
+            path: 'viewsale',
+            component: ViewSaleComponent
+          },
+        ]
       },
       {
         path: 'associates',

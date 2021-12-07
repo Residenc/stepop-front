@@ -46,6 +46,8 @@ import{JwtHelperService, JWT_OPTIONS} from '@auth0/angular-jwt';
 import {LoadScriptsService} from "./services/load-scripts/load-scripts.service";
 import { StoreprofileComponent } from './views/main/user/storeprofile/storeprofile.component';
 import { ViewServiceComponent } from './views/main/products/view-service/view-service.component';
+import { ViewSaleComponent } from './views/main/user/accountview/saleshistory/view-sale/view-sale.component';
+import { ViewPurchaseComponent } from './views/main/user/accountview/shoppinghistory/view-purchase/view-purchase.component';
 
 @NgModule({
   declarations: [
@@ -78,6 +80,8 @@ import { ViewServiceComponent } from './views/main/products/view-service/view-se
     AddproductComponent,
     StoreprofileComponent,
     ViewServiceComponent,
+    ViewSaleComponent,
+    ViewPurchaseComponent,
   ],
   imports: [
     BrowserModule,
