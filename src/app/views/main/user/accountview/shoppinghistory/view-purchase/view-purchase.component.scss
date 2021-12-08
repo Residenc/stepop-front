@@ -1,0 +1,44 @@
+.modal{
+    .modal-dialog{
+        .modal-content{
+            .modal-header{
+                border: none;
+                button{
+                    &:focus {
+                        border-color: none;
+                        box-shadow: none;
+                    }
+                }
+            }
+            .modal-body{
+                .container{
+                    .detalle-purchase{
+                        .col-12{
+                            .info{
+                                font-size: 18px;
+                                margin-bottom: 10px;
+                                p{
+                                    font-size: 14px;
+                                    font-weight: normal;
+                                }
+                            }
+                            .resume{
+                                .col-10{
+                                    border: 1px solid #ededed;
+                                    padding: 13px;
+                                }
+                            }
+                        }
+                    }
+                    .img-product{
+                        img{
+                            max-height: 250px;
+                            max-width: 250px;
+                            border: 1.5px solid rgb(202, 202, 202);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

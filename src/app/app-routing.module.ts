@@ -94,13 +94,7 @@ const routes: Routes = [
       },
       {
         path: 'shoppinghistory',
-        component: ShoppinghistoryComponent,
-        children: [
-          {
-            path: 'viewpurchase',
-            component: ViewPurchaseComponent
-          }
-        ]
+        component: ShoppinghistoryComponent
       },
       {
         path: 'products',
@@ -108,13 +102,7 @@ const routes: Routes = [
       },
       {
         path: 'saleshistory',
-        component: SaleshistoryComponent,
-        children: [
-          {
-            path: 'viewsale',
-            component: ViewSaleComponent
-          },
-        ]
+        component: SaleshistoryComponent
       },
       {
         path: 'associates',
@@ -130,7 +118,10 @@ const routes: Routes = [
 
   {path: 'generalview', component:GeneralViewComponent},
   {path: 'viewservice', component:ViewServiceComponent},
-  {path: 'viewproduct/:id', component:ViewProductComponent}
+  {path: 'viewproduct/:id', component:ViewProductComponent},
+  
+  {path: 'viewpurchase', component: ViewPurchaseComponent},
+  {path: 'viewsale', component: ViewSaleComponent}
 ];
 
 @NgModule({
