@@ -9,11 +9,13 @@
                     max-height: 104px;
                 }
             }
-            .icon-edit{
-                color: rgb(0, 0, 0);
-            }
-            .icon-drop{
-                color: rgb(255, 50, 50);
+            .btn-mobile{
+                .btn-purple{
+                    background: rgba(177, 17, 252, 0.5);
+                    i{  
+                        color: white;
+                    }
+                }
             }
             &:nth-child(odd){
                 background: #e0cff3;
