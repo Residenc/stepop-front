@@ -49,6 +49,12 @@ import { ViewServiceComponent } from './views/main/products/view-service/view-se
 import { ViewSaleComponent } from './views/main/user/accountview/saleshistory/view-sale/view-sale.component';
 import { ViewPurchaseComponent } from './views/main/user/accountview/shoppinghistory/view-purchase/view-purchase.component';
 
+import { ContactComponent } from './views/footer/links/contact/contact.component';
+import { FaqsComponent } from './views/footer/links/faqs/faqs.component';
+import { PrivacityComponent } from './views/footer/links/privacity/privacity.component';
+import { TermsandconditionsComponent } from './views/footer/links/termsandconditions/termsandconditions.component';
+import { AboutusComponent } from './views/footer/links/aboutus/aboutus.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -82,6 +88,11 @@ import { ViewPurchaseComponent } from './views/main/user/accountview/shoppinghis
     ViewServiceComponent,
     ViewSaleComponent,
     ViewPurchaseComponent,
+    ContactComponent,
+    FaqsComponent,
+    PrivacityComponent,
+    TermsandconditionsComponent,
+    AboutusComponent,
   ],
   imports: [
     BrowserModule,

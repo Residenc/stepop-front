@@ -36,6 +36,12 @@ import { ViewServiceComponent } from './views/main/products/view-service/view-se
 
 import { AuthGuard } from './guards/auth.guard';
 
+import { AboutusComponent } from './views/footer/links/aboutus/aboutus.component';
+import { ContactComponent } from './views/footer/links/contact/contact.component';
+import { FaqsComponent } from './views/footer/links/faqs/faqs.component';
+import { PrivacityComponent } from './views/footer/links/privacity/privacity.component';
+import { TermsandconditionsComponent } from './views/footer/links/termsandconditions/termsandconditions.component';
+
 
 const routes: Routes = [
 
@@ -121,7 +127,15 @@ const routes: Routes = [
   {path: 'viewproduct/:id', component:ViewProductComponent},
   
   {path: 'viewpurchase', component: ViewPurchaseComponent},
-  {path: 'viewsale', component: ViewSaleComponent}
+  {path: 'viewsale', component: ViewSaleComponent},
+
+
+  {path: 'aboutus', component: AboutusComponent},
+  {path: 'contact', component: ContactComponent},
+  {path: 'faqs', component: FaqsComponent},
+  {path: 'privacity', component: PrivacityComponent},
+  {path: 'termsconditions', component: TermsandconditionsComponent},
+  {path: 'associates', component: AssociatesComponent}
 ];
 
 @NgModule({
