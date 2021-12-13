@@ -55,6 +55,7 @@ import { PrivacityComponent } from './views/footer/links/privacity/privacity.com
 import { TermsandconditionsComponent } from './views/footer/links/termsandconditions/termsandconditions.component';
 import { AboutusComponent } from './views/footer/links/aboutus/aboutus.component';
 import { LinksComponent } from './views/footer/links/links.component';
+import { AssociatesfooterComponent } from './views/footer/links/associatesfooter/associatesfooter.component';
 
 @NgModule({
   declarations: [
@@ -95,6 +96,7 @@ import { LinksComponent } from './views/footer/links/links.component';
     TermsandconditionsComponent,
     AboutusComponent,
     LinksComponent,
+    AssociatesfooterComponent,
   ],
   imports: [
     BrowserModule,

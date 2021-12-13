@@ -42,6 +42,7 @@ import { ContactComponent } from './views/footer/links/contact/contact.component
 import { FaqsComponent } from './views/footer/links/faqs/faqs.component';
 import { PrivacityComponent } from './views/footer/links/privacity/privacity.component';
 import { TermsandconditionsComponent } from './views/footer/links/termsandconditions/termsandconditions.component';
+import { AssociatesfooterComponent } from './views/footer/links/associatesfooter/associatesfooter.component';
 
 
 const routes: Routes = [
@@ -143,8 +144,7 @@ const routes: Routes = [
       {path: 'faqs', component: FaqsComponent},
       {path: 'privacity', component: PrivacityComponent},
       {path: 'termsconditions', component: TermsandconditionsComponent},
-      {path: 'associates', component: AssociatesComponent}
-
+      {path: 'associatesfooter', component:AssociatesfooterComponent},
     ]
   },
   {path: 'contact', component: ContactComponent},
