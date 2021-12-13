@@ -1,0 +1,32 @@
+<div class="container-lg my-0 my-lg-5 px-0 px-lg-5 py-5 shadow rounded-3" style="background-color: rgb(255,255,255);">
+    <div class="row r">
+
+        <div class="col-4 animate__animated animate__fadeInLeft animate__faster">
+            <ul class="nav menu d-flex d-sm-block justify-content-center flex-wrap" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/links/aboutus']" [routerLinkActive]="'active'"><i class="fas fa-address-card me-4"></i><span>Nosotros</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/links/associates']" [routerLinkActive]="'active'" [routerLinkActive]="'active'"><i class="fas fa-users me-4"></i><span>Asociados</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/links/faqs']" [routerLinkActive]="'active'" [routerLinkActive]="'active'"><i class="fas fa-question-circle me-4"></i><span>FAQs</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/links/termsconditions']" [routerLinkActive]="'active'" [routerLinkActive]="'active'"><i class="fas fa-file-alt me-4"></i><span>Terminos & Condiciones</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/links/privacity']" [routerLinkActive]="'active'" [routerLinkActive]="'active'"><i class="bi bi-shield-fill-check me-4"></i><span>Politicas De Privacidad</span></a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="col-8">
+            <div class="p-3 p-lg-5">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+
+    </div>
+</div>

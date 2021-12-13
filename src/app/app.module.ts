@@ -54,6 +54,7 @@ import { FaqsComponent } from './views/footer/links/faqs/faqs.component';
 import { PrivacityComponent } from './views/footer/links/privacity/privacity.component';
 import { TermsandconditionsComponent } from './views/footer/links/termsandconditions/termsandconditions.component';
 import { AboutusComponent } from './views/footer/links/aboutus/aboutus.component';
+import { LinksComponent } from './views/footer/links/links.component';
 
 @NgModule({
   declarations: [
@@ -93,6 +94,7 @@ import { AboutusComponent } from './views/footer/links/aboutus/aboutus.component
     PrivacityComponent,
     TermsandconditionsComponent,
     AboutusComponent,
+    LinksComponent,
   ],
   imports: [
     BrowserModule,
