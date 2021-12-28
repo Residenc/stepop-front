@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, MinLengthValidator, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AdressService, Colonia, Estado } from 'src/app/services/address/adress.service';
 import { UsersService } from 'src/app/services/Users/users.service';
@@ -15,16 +15,16 @@ export class RegisterviewComponent implements OnInit {
 
 
   newUser= new FormGroup({
-    nombre_usuario: new FormControl('',),
-    apellidos: new FormControl('',),
-    telefono: new FormControl(''),
-    email: new FormControl(''),
-    password: new FormControl(''),
-    calle: new FormControl(''),
-    entre_calle:new FormControl(''),
-    y_calle:new FormControl(''),
-    no_interior:new FormControl(''),
-    no_exterior:new FormControl(''),
+    nombre_usuario: new FormControl('',[Validators.required, Validators.pattern('[a-zA-Z ]*') ]),
+    apellidos: new FormControl('',[Validators.required, Validators.pattern('[a-zA-Z ]*')]),
+    telefono: new FormControl('',[Validators.required]),//espera perra
+    email: new FormControl('',[Validators.required, Validators.email]),
+    password: new FormControl('',[Validators.required, Validators.minLength(7)]),
+    calle: new FormControl('',[Validators.required]),
+    entre_calle:new FormControl('',[Validators.required]),
+    y_calle:new FormControl('',[Validators.required]),
+    no_interior:new FormControl('',[Validators.required]),
+    no_exterior:new FormControl('s/n',[Validators.required]),
 
   });
 

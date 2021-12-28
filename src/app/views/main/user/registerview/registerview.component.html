@@ -9,6 +9,9 @@
             <div class="row mb-0 mb-xl-3">
                 <div class="col-12 col-xl-6 col-md-6 mb-3 mb-xl-0">
                     <input type="text" class="form-control" id="nombres" placeholder="Nombre(s)"  formControlName="nombre_usuario">
+                    <div *ngIf="newUser.get('nombre_usuario')?.errors && newUser.get('nombre_usuario')?.dirty">
+                        <p *ngIf="newUser.get('nombre_usuario')?.hasError('required')" >EL campo es requerido</p>
+                    </div>
                 </div>
 
                 <div class="col-12 col-xl-6 col-md-6 mb-3 mb-xl-0">
