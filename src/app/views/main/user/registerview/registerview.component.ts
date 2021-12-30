@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, MinLengthValidator, Validators } from '@angular/forms';
+import { FormControl, FormControlDirective, FormGroup, MinLengthValidator, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AdressService, Colonia, Estado } from 'src/app/services/address/adress.service';
 import { UsersService } from 'src/app/services/Users/users.service';
@@ -13,18 +13,22 @@ export class RegisterviewComponent implements OnInit {
   ListarEstado: Estado[] | Array<any>;
   ListarColonia: Colonia[] | Array<any>;
 
+  private telephonePattern:any=/[0-9\+\-\ ]/;
+  private emailPattern: any = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  
 
   newUser= new FormGroup({
-    nombre_usuario: new FormControl('',[Validators.required, Validators.pattern('[a-zA-Z ]*') ]),
-    apellidos: new FormControl('',[Validators.required, Validators.pattern('[a-zA-Z ]*')]),
-    telefono: new FormControl('',[Validators.required]),//espera perra
-    email: new FormControl('',[Validators.required, Validators.email]),
+    nombre_usuario: new FormControl('',[Validators.required, Validators.minLength(3), Validators.maxLength(25), Validators.pattern('[a-zA-Z ]*') ]),
+    apellidos: new FormControl('',[Validators.required, Validators.minLength(3), Validators.maxLength(30),Validators.pattern('[a-zA-Z ]*')]),
+    telefono: new FormControl('',[Validators.required, Validators.pattern(this.telephonePattern)]),
+    email: new FormControl('',[Validators.required,Validators.pattern(this.emailPattern)]),
     password: new FormControl('',[Validators.required, Validators.minLength(7)]),
-    calle: new FormControl('',[Validators.required]),
-    entre_calle:new FormControl('',[Validators.required]),
-    y_calle:new FormControl('',[Validators.required]),
-    no_interior:new FormControl('',[Validators.required]),
-    no_exterior:new FormControl('s/n',[Validators.required]),
+    confirmpassword: new FormControl('',[Validators.required]),
+    calle: new FormControl('',[Validators.required, Validators.maxLength(25)]),
+    entre_calle:new FormControl('',[Validators.required, Validators.maxLength(35)]),
+    y_calle:new FormControl('',[Validators.required,Validators.maxLength(35)]),
+    no_exterior:new FormControl('',[Validators.required, Validators.maxLength(8)]),
+    no_interior:new FormControl('s/n',[Validators.required, Validators.maxLength(8)]),
 
   });
 
