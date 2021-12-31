@@ -11,11 +11,11 @@ import Swal from 'sweetalert2';
   styleUrls: ['./signin.component.scss']
 })
 export class SigninComponent implements OnInit {
-
   authForm= new FormGroup({
     email: new FormControl('' ,[Validators.required]),
     password: new FormControl('',[Validators.required,Validators.minLength(7)])
   });
+  id:any;
   location: any;
   constructor(private authService:AuthenticationService,private router:Router,
     private userService:UsersService, private activeRoute :ActivatedRoute) { }
@@ -28,9 +28,9 @@ export class SigninComponent implements OnInit {
     try{
       this.authService.signIn(this.authForm.value).subscribe((res:any)=> {
         localStorage.setItem('token',res.token);
-        console.log(this.authForm.value)
         this.getId();
-        window.location.reload();
+        window.location.href;
+        
         //this.router.navigate(['accountview/home']);
         const Toast = Swal.mixin({
           toast: true,
@@ -60,7 +60,11 @@ export class SigninComponent implements OnInit {
   getId(){
     this.userService.getUsuarioId(this.authForm.value).subscribe((res:any)=>{
       localStorage.setItem('view',res)
-      console.log(res)
+      var equis = this.id = res;
+
+      console.log('ID del usuario',equis)
+      this.router.navigate(["accountview/home/"+equis]);
+      
     },(err)=>
     console.log('ocurrio un error + err')
     )};
@@ -72,10 +76,9 @@ export class SigninComponent implements OnInit {
     email: new FormControl('',[Validators.required]),
   });
 
-  navigation(){
-    this.router.navigate(["generalview"]);
+ 
     
-  }
+    
   onRegister(){
     console.log(this.registerForm.value)
     if(this.registerForm.valid){

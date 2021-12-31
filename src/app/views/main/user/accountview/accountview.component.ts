@@ -13,8 +13,8 @@ export class AccountviewComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
   }
-  
   logout(){
     localStorage.clear();
     const Toast = Swal.mixin({
