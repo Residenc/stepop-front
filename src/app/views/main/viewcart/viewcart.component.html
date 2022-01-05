@@ -2,16 +2,16 @@
     <div class="row">
         <div class="col-12 col-md-8 cart-product-wrapper px-5 justify-content-center animate__animated animate__fadeInUp animate__faster">
 
-            <div class="cart-product row py-4" *ngFor="let producto of products; let i = index">
+            <div class="cart-product row py-4" *ngFor="let item of products; let i = index">
                 <div class="col-12 col-lg-4 text-center mb-4 mb-lg-0">
                     <a href="#">
-                        <img src="https://picsum.photos/200/220" alt="" class="rounded img-fluid">
+                        <img src="{{item.image}}" alt="" class="rounded img-fluid">
                     </a>
                 </div>
                 <div class="col-12 col-lg-5 d-flex mb-3 justify-content-center align-self-center">
                     <div>
-                        <a class="d-block mb-2 text-nowrap cart-product-text" >{{producto.nombre}}</a>
-                        <strong class="text-muted d-block mb-2 text-center text-lg-start">${{producto.precio}}</strong>
+                        <a class="d-block mb-2 text-nowrap cart-product-text" >{{item.title}}</a>
+                        <strong class="text-muted d-block mb-2 text-center text-lg-start">${{item.price}}</strong>
                        <!--<div class="d-block mb-2">
                             <label for="cantidadinput" class="form-label d-inline me-3">Cantidad:</label>
                             <input type="number" class="form-control cantidadNumber d-inline" id="cantidadinput" value="1">

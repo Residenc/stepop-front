@@ -321,36 +321,36 @@
                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 productsContenido">
 
 
-                    <div class="col product animate__animated animate__fadeIn" *ngFor="let producto of ListarProducto">
+                    <div class="col product animate__animated animate__fadeIn" *ngFor="let item of filterCategory ">
                         <div class="card">
-                            <a  [routerLink]="['/viewproduct',producto.id_produc]"><h5 class="card-header">{{producto.nombre}}</h5></a>
+                            <a  [routerLink]="[]"><h5 class="card-header">{{item.title}}</h5></a>
                             <div class="row g-0 d-flex justify-content-center">
                                 <div class="col-5 align-self-center img-column">
-                                    <a href="#" routerLink="/viewproduct"><img class="img-fluid img-product" src="../../../../../assets/images/59.jpg" alt=""></a>
+                                    <a href="#" routerLink="/viewproduct"><img class="img-fluid img-product" src="{{item.image}}" alt=""></a>
                                 </div>
                                 <div class="col-7 align-self-center product-column">
                                     <div class="card-body">
                                         <div class="description mb-4">
                                             <strong class="product-description-title">Descripcion:</strong>
-                                            <p class="product-description mb-2">{{producto.precio}}</p>
+                                            <p class="product-description mb-2">{{item.description}}</p>
                                         </div>
                                         <div class="product-price mb-4">
-                                            <span class="price d-block">$ {{producto.precio}}.<small>00</small></span>
+                                            <span class="price d-block">$ {{item.price}}.<small>00</small></span>
                                             <small class="shipment d-block">Envio Gratis!</small>
                                         </div>
                                         <div class="buttonsActions d-none d-xl-block">
                                             <a class="btn btn-sm btn-purple w-100 mb-2 d-block" href="#" routerLink="/checkout">Comprar Ahora</a>
-                                            <button (click)=addtocart(producto) class="btn btn-sm btn-outline-success w-100 d-block" type="button"><i class="bi bi-cart-plus me-1"></i>Agregar Al Carrito</button>
+                                            <button (click)=addtocart(item) class="btn btn-sm btn-outline-success w-100 d-block" type="button"><i class="bi bi-cart-plus me-1"></i>Agregar Al Carrito</button>
                                         </div>  
                                         <div class="buttonsActions d-block d-xl-none">
                                             <a class="btn btn-sm btn-purple w-100 mb-2 d-block" href="#" routerLink="/checkout">Comprar</a>
-                                            <button (click)=addtocart(producto) class="btn btn-sm btn-outline-success w-100 d-block" type="button"><i class="bi bi-cart-plus me-1"></i>Agregar</button>
+                                            <button (click)=addtocart(item) class="btn btn-sm btn-outline-success w-100 d-block" type="button"><i class="bi bi-cart-plus me-1"></i>Agregar</button>
                                         </div> 
                                     </div>
                                 </div>
                                 <div class="product-info d-flex justify-content-between px-1 px-md-3 my-3">
                                     <small class="product-subcategory"><a href="#">Subcategoria</a></small>
-                                    <small class="product-seller">Vendido Por :<a href="#" routerLink="/storeprofile" data-bs-toggle="tooltip" title="{{producto.nombre_empresa}}"> {{producto.nombre_empresa}}</a></small>
+                                   <!-- <small class="product-seller">Vendido Por :<a href="#" routerLink="/storeprofile" data-bs-toggle="tooltip" title="{{producto.nombre_empresa}}"> {{producto.nombre_empresa}}</a></small>-->
                                 </div>  
                             </div>
                         </div>
