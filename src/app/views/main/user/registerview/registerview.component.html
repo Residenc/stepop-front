@@ -120,16 +120,21 @@
                     <input type="text" class="form-control" id="calle2" placeholder="Entre Calle" formControlName="entre_calle">
                     <div *ngIf="newUser.get('calle')?.errors && newUser.get('calle')?.dirty || newUser.get('calle')?.touched">
                         <p *ngIf="newUser.get('calle')?.hasError('required')" >EL campo es requerido</p>
-                        <p *ngIf="newUser.get('calle')?.hasError('maxlength')" >Nombre de la calle maximo 25 letras</p> 
+                        <p *ngIf="newUser.get('calle')?.hasError('maxlength')" >Nombre de la calle maximo 35 letras</p> 
                     </div>
                 </div>
 
                 <div class="col-12 col-md-5 mb-3 mb-xl-0">
                     <input type="text" class="form-control" id="calle2" placeholder="Y Calle" formControlName="y_calle">
+                    <div *ngIf="newUser.get('y_calle')?.errors && newUser.get('y_calle')?.dirty || newUser.get('y_calle')?.touched">
+                        <p *ngIf="newUser.get('y_calle')?.hasError('required')" >EL campo es requerido</p>
+                        <p *ngIf="newUser.get('y_calle')?.hasError('maxlength')" >Nombre de la calle maximo 35 letras</p> 
+                    </div>
                 </div>
 
                 <div class="col-12 col-md-2 mb-3 mb-xl-0">
                     <input type="text" class="form-control" id="codigopostal" placeholder="Codigo Postal">
+                    
                 </div>
             </div>
             <div class="row mb-0 mb-xl-3">
