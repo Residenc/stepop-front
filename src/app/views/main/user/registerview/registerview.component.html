@@ -9,13 +9,23 @@
             <div class="row mb-0 mb-xl-3">
                 <div class="col-12 col-xl-6 col-md-6 mb-3 mb-xl-0">
                     <input type="text" class="form-control" id="nombres" placeholder="Nombre(s)"  formControlName="nombre_usuario">
-                    <div *ngIf="newUser.get('nombre_usuario')?.errors && newUser.get('nombre_usuario')?.dirty">
+                    <div *ngIf="newUser.get('nombre_usuario')?.errors && newUser.get('nombre_usuario')?.dirty || newUser.get('nombre_usuario')?.touched">
                         <p *ngIf="newUser.get('nombre_usuario')?.hasError('required')" >EL campo es requerido</p>
+                        <p *ngIf="newUser.get('nombre_usuario')?.hasError('pattern')" >Solo se permite letras</p>
+                        <p *ngIf="newUser.get('nombre_usuario')?.hasError('minlength')" >Nombre usuario minimo 3 letras</p>
+                        <p *ngIf="newUser.get('nombre_usuario')?.hasError('maxlength')" >Nombre usuario maximo 25 letras</p>
+                        
                     </div>
                 </div>
 
                 <div class="col-12 col-xl-6 col-md-6 mb-3 mb-xl-0">
-                    <input type="text" class="form-control" id="apellidop" placeholder="Apellidos"  formControlName="apellidos">
+                    <input type="text" class="form-control" id="apellidos" placeholder="Apellidos"  formControlName="apellidos">
+                    <div *ngIf="newUser.get('apellidos')?.errors && newUser.get('apellidos')?.dirty || newUser.get('apellidos')?.touched">
+                        <p *ngIf="newUser.get('apellidos')?.hasError('required')" >EL campo es requerido</p>
+                        <p *ngIf="newUser.get('apellidos')?.hasError('pattern')" >Solo se permite letras</p>
+                        <p *ngIf="newUser.get('apellidos')?.hasError('minlength')" >Nombre usuario minimo 3 letras</p>
+                        <p *ngIf="newUser.get('apellidos')?.hasError('maxlength')" >Nombre usuario maximo 30 letras</p>
+                    </div>
                 </div>
 
              <!--   <div class="col-12 col-xl-3 col-md-6 mb-3 mb-xl-0 text-center align-self-center">
@@ -29,6 +39,7 @@
                     </div>
                 </div>-->
             </div>
+            
             <div class="row mb-0 mb-xl-3">
                 <!--<div class="col-12 col-xl-6 mb-3 mb-xl-0">
                     <div class="row g-0">
@@ -42,25 +53,36 @@
                 </div>-->
 
                 <div class="col-12 col-xl-6 col-md-6 mb-3 mb-xl-0">
-                    <input type="text" class="form-control" id="telefonof" placeholder="Telefono Fijo (10 Digitos)">
+                    <input type="text" class="form-control" id="telefono" placeholder="Telefono Fijo (10 Digitos) mas lada"  formControlName="telefono">
+                    <div *ngIf="newUser.get('telefono')?.errors && newUser.get('telefono')?.dirty || newUser.get('telefono')?.touched">
+                        <p *ngIf="newUser.get('telefono')?.hasError('required')" >EL campo es requerido</p>
+                        <p *ngIf="newUser.get('telefono')?.hasError('pattern')" >Los valores no son permitidos</p>
+                    </div>
                 </div>
-
-                <div class="col-12 col-xl-6 col-md-6 mb-3 mb-xl-0">
-                    <input type="text" class="form-control" id="telefonoc" placeholder="Telefono Celular (10 Digitos)"  formControlName="telefono">
-                </div>
-
-            </div>
-            <div class="row">        
+                  
                 <div class="col-12 col-xl-6 mb-3 mb-xl-0">
                     <input type="email" class="form-control" id="correo" placeholder="Correo Electronico" formControlName="email">
+                    <div *ngIf="newUser.get('email')?.errors && newUser.get('email')?.dirty || newUser.get('email')?.touched">
+                        <p *ngIf="newUser.get('email')?.hasError('required')" >EL campo es requerido</p>
+                        <p *ngIf="newUser.get('email')?.hasError('pattern')" >El valor debe ser una dirección de correo electrónico válida.</p>
+                    </div>
                 </div>
-                <div class="col-12 col-xl-3 col-md-6 mb-3 mb-xl-0">
-                    <input type="email" class="form-control" id="passwd1" placeholder="Contraseña"  formControlName="password">
+                
+            </div>
+
+            <div class="row mb-0 mb-xl-3">        
+                <div class="col-12 col-xl-6 mb-3 mb-xl-0">
+                    <input type="text" class="form-control" id="passwd1" placeholder="Contraseña"  formControlName="password">
+                    <div *ngIf="newUser.get('password')?.errors && newUser.get('password')?.dirty || newUser.get('password')?.touched">
+                        <p *ngIf="newUser.get('password')?.hasError('required')" >EL campo es requerido</p>
+                    </div>
                 </div>
-                <div class="col-12 col-xl-3 col-md-6 mb-3 mb-xl-0">
-                    <input type="email" class="form-control" id="passwd2" placeholder="Confirmar Contraseña">
+                <div class="col-12 col-xl-6 mb-3 mb-xl-0">
+                    <input type="text" class="form-control" id="passwd2" placeholder="Confirmar Contraseña" FormControl>
+                    
                 </div>
             </div>
+
         </div>
 
         <div class="row mb-4 justify-content-center">
@@ -71,19 +93,35 @@
             <div class="row mb-0 mb-xl-3">
                 <div class="col-12 col-md-6 col-xl-8 mb-3 mb-xl-0">
                     <input type="text" class="form-control" id="calle" placeholder="Calle" formControlName="calle">
+                    <div *ngIf="newUser.get('calle')?.errors && newUser.get('calle')?.dirty || newUser.get('calle')?.touched">
+                        <p *ngIf="newUser.get('calle')?.hasError('required')" >EL campo es requerido</p>
+                        <p *ngIf="newUser.get('calle')?.hasError('maxlength')" >Nombre de la calle maximo 25 letras</p> 
+                    </div>
                 </div>
 
                 <div class="col-6 col-md-3 col-xl-2 mb-3 mb-xl-0">
                     <input type="text" class="form-control" id="numeroext" placeholder="Numero Exterior" formControlName="no_exterior">
+                    <div *ngIf="newUser.get('no_exterior')?.errors && newUser.get('no_exterior')?.dirty || newUser.get('no_exterior')?.touched">
+                        <p *ngIf="newUser.get('no_exterior')?.hasError('required')" >EL campo es requerido</p>
+                        <p *ngIf="newUser.get('no_exterior')?.hasError('maxlength')" >Maximo 8 caracteres</p> 
+                    </div>
                 </div>
 
                 <div class="col-6 col-md-3 col-xl-2 mb-3 mb-xl-0">
                     <input type="text" class="form-control" id="numeroint" placeholder="Numero Interior" formControlName="no_interior">
+                    <div *ngIf="newUser.get('no_interior')?.errors && newUser.get('no_interior')?.dirty || newUser.get('no_interior')?.touched">
+                        <p *ngIf="newUser.get('no_interior')?.hasError('required')" >EL campo es requerido</p>
+                        <p *ngIf="newUser.get('no_interior')?.hasError('maxlength')" >Maximo 8 caracteres</p> 
+                    </div>
                 </div>
             </div>
             <div class="row mb-0 mb-xl-3">
                 <div class="col-12 col-md-5 mb-3 mb-xl-0">
                     <input type="text" class="form-control" id="calle2" placeholder="Entre Calle" formControlName="entre_calle">
+                    <div *ngIf="newUser.get('calle')?.errors && newUser.get('calle')?.dirty || newUser.get('calle')?.touched">
+                        <p *ngIf="newUser.get('calle')?.hasError('required')" >EL campo es requerido</p>
+                        <p *ngIf="newUser.get('calle')?.hasError('maxlength')" >Nombre de la calle maximo 25 letras</p> 
+                    </div>
                 </div>
 
                 <div class="col-12 col-md-5 mb-3 mb-xl-0">
