@@ -15,8 +15,10 @@
                 <img [src]="previsualizacion" class="img-fluid" alt="Foto De Perfil" width="300" height="300">
             </div>
         </div>
-        <form class="col-12 col-lg-7" [formGroup]="newProduct" >
-            <input formControlName="imagen" (change)="capturarFile($event)" type="file">
+        <form class="col-12 col-lg-7" [formGroup]="newProduct" (ngSubmit)="onSubmit()" >
+            <input type="file" class="form-control-file" accept="image/*" name="image" id="fileUpload"
+            (change)="selectImage($event)">
+            
             
             <!-- <div *ngIf="previsualizacion">
                 <img [src]="previsualizacion" alt="">
@@ -76,7 +78,7 @@
             </div>
             <div class="mb-4 mt-4 mt-lg-0 d-flex justify-content-center align-items-center actions">
                 <button type="button" class="btn btn-secondary me-3" (click)="back()">Cancelar</button>
-                <button class="btn btn-primary" (click)="onSubmit()">Agregar Producto</button>
+                <button type="submit" class="btn btn-primary" >Agregar Producto</button>
             </div>
         </form>
     </div>

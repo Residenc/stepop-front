@@ -29,7 +29,7 @@ export class SigninComponent implements OnInit {
       this.authService.signIn(this.authForm.value).subscribe((res:any)=> {
         localStorage.setItem('token',res.token);
         this.getId();
-        window.location.href;
+        window.location.reload;
         
         //this.router.navigate(['accountview/home']);
         const Toast = Swal.mixin({
@@ -64,7 +64,7 @@ export class SigninComponent implements OnInit {
 
       console.log('ID del usuario',equis)
       this.router.navigate(["accountview/home/"+equis]);
-      
+   
     },(err)=>
     console.log('ocurrio un error + err')
     )};
