@@ -16,8 +16,8 @@
             </div>
         </div>
         <form class="col-12 col-lg-7" [formGroup]="newProduct" (ngSubmit)="onSubmit()" >
-            <input type="file" class="form-control-file" accept="image/*" name="image" id="fileUpload"
-            (change)="selectImage($event)">
+            <input multiple type="file" class="form-control-file" accept="image/*" name="image" id="fileUpload"
+            (change)="selectMultipleImage($event)">
             
             
             <!-- <div *ngIf="previsualizacion">

@@ -13,9 +13,10 @@ import Swal from 'sweetalert2';
 })
 export class AddproductComponent implements OnInit {
   title = 'fileUpload';
-  images = '';
+  images: any = [];
   imgURL = '/assets/noimage.png';
   multipleImages = [];
+  prueba:any = []
   imagenes: any = [];
   public archivos: any =[]
 public previsualizacion :string;
@@ -51,14 +52,17 @@ public previsualizacion :string;
   selectMultipleImage(event) {
     if (event.target.files.length > 0) {
       this.multipleImages = event.target.files;
+      this.prueba = this.multipleImages
     }
   }
 
   onSubmit() {
     const formData = new FormData();
-    formData.append('file', this.images);
+    //formData.append('files', this.prueba);
+    for (let x = 0; x < this.prueba.length; x++) {
+     formData.append('files', this.prueba[x])
+    }
    
-
     this.http.post<any>('http://localhost:3000/file', formData).subscribe(
       (res) => console.log(res,  Swal.fire({
                 icon: 'success',
