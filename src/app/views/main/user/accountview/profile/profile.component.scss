@@ -8,6 +8,7 @@
             transition: all .1s ease-in-out;
             &:hover {
                 color: rgb(212, 132, 250);
+                cursor: pointer !important;
             }
         }
         .nav-link.active {
@@ -15,6 +16,7 @@
             font-weight: 700;
             background-color: transparent;
             border-bottom: 1px solid rgb(230, 176, 255);
+            cursor: pointer !important;
         }
     }
 }
