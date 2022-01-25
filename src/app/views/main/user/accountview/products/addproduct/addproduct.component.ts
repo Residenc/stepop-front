@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { FormControl, FormGroup } from '@angular/forms';
 import { UsersService } from 'src/app/services/Users/users.service';
-import { ProductosService } from 'src/app/services/productos/productos.service';
+import { Producto, ProductosService } from 'src/app/services/productos/productos.service';
 import { DomSanitizer } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 import Swal from 'sweetalert2';
@@ -12,6 +12,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./addproduct.component.scss']
 })
 export class AddproductComponent implements OnInit {
+  ListarProducto: Producto [ ] | any;
   title = 'fileUpload';
   images: any = [];
   imgURL = '/assets/noimage.png';
@@ -27,10 +28,7 @@ public previsualizacion :string;
     precio: new FormControl(''),
     stock: new FormControl(''),
     tipo: new FormControl('')
-    /*password: new FormControl('',),
-    username:  new FormControl(''),
-    email: new FormControl(''),
-    rol: new FormControl('')*/
+
   });
   constructor(private http: HttpClient,private location: Location,private productService:ProductosService,private sanitizer: DomSanitizer) { }
 
@@ -57,10 +55,15 @@ public previsualizacion :string;
   }
 
   onSubmit() {
+
+    this.agregar();
+
+  
     const formData = new FormData();
     //formData.append('files', this.prueba);
     for (let x = 0; x < this.prueba.length; x++) {
      formData.append('files', this.prueba[x])
+  
     }
    
     this.http.post<any>('http://localhost:3000/file', formData).subscribe(
@@ -85,6 +88,15 @@ public previsualizacion :string;
   
   }
 
+  agregar(){
+    if(this.newProduct.valid){
+      this.productService.addProducto(this.newProduct.value).subscribe((res:any) =>{
+      console.log(res);
+
+    })
+    }else{console.log('Not Valid')
+    }
+    }
   
   mostrarImg(){
     

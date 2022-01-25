@@ -10,7 +10,7 @@ import { Producto, ProductosService } from 'src/app/services/productos/productos
 })
 export class ViewProductComponent implements OnInit {
   producto:Producto={
-    id_produc:'',
+    id_producto:'',
     nombre:'',
     precio:'', 
     tipo:'',

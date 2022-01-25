@@ -18,7 +18,7 @@ export class EditproductComponent implements OnInit {
     descripcion:new FormControl(''),
   })
   usuario:Producto={
-    id_produc:'',
+    id_producto:'',
     nombre:'',
     precio:'', 
     tipo:'',
@@ -52,7 +52,7 @@ export class EditproductComponent implements OnInit {
   
   }
   modificar(){
-    this.productoServices.editProducto(this.usuario.id_produc, this.usuario).subscribe(
+    this.productoServices.editProducto(this.usuario.id_producto, this.usuario).subscribe(
     res =>{
       console.log(res);
       this.router.navigate(['accountview/products']);

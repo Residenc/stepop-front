@@ -28,13 +28,13 @@ export class ProductosService {
   
   //add
   addProducto(producto:Producto){
-    return this.http.post(this.url+'/agregarProducto',producto)
+    return this.http.post(this.url+'/registroproductos',producto)
   }
 
   //get un producto
   
-  getProducto(id_produc:string){
-    return this.http.get(this.url+'/producto/'+id_produc);
+  getProducto(id_producto:string){
+    return this.http.get(this.url+'/producto/'+id_producto);
   }
   //eliminar
   deleteProduc(id:string){
@@ -47,13 +47,13 @@ export class ProductosService {
   }
 
   //Extraer un producto para viewproduct
-  getPro(id_produc:string){
-    return this.http.get(this.url+'/vistapro/'+id_produc);
+  getPro(id_producto:string){
+    return this.http.get(this.url+'/vistapro/'+id_producto);
   }
 
 }
     export interface Producto{
-id_produc?:string | any;
+id_producto?:string | any;
 nombre?:string | any;
 precio?:string | any;
 tipo?:string | any;
