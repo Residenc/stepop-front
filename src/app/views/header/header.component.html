@@ -30,11 +30,6 @@
                         <i class="bi bi-bell navbar-tool-icon"></i>
                     </div>
                 </button>
-                <ul class="dropdown-menu dropdown-menu-end animate__animated animate__fadeIn animate__faster">
-                    <li><a class="dropdown-item" href="#">Notificacion #1</a></li>
-                    <li><a class="dropdown-item" href="#">Notificacion #2</a></li>
-                    <li><a class="dropdown-item" href="#">Notificacion #3</a></li>
-                </ul>
             </div>
 
 
@@ -61,7 +56,7 @@
                         </button>
                         <ul  class="dropdown-menu animate__animated animate__fadeIn animate__faster" aria-labelledby="dropdownOnline">
                           <li>
-                              <a class="dropdown-item" (click)="view()" >Mi Cuenta</a>
+                              <a class="dropdown-item" (click)="view()" style="cursor: pointer;">Mi Cuenta</a>
                         </li>
                           <li><a class="dropdown-item" (click)="logout()" href="#">Cerrar Sesion</a></li>
                           
@@ -94,14 +89,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link d-block d-sm-none" href="#signin-modal" data-bs-toggle="modal"><i class="bi bi-person-circle navbar-tool-icon me-2"></i>Mi Cuenta</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><i class="bi bi-bell me-2"></i>Notificaciones</a>
-                        <ul class="dropdown-menu text-end ms-auto" style="max-width:150px;">
-                            <li><a class="dropdown-item" href="#">Notificacion #1</a></li>
-                            <li><a class="dropdown-item" href="#">Notificacion #2</a></li>
-                            <li><a class="dropdown-item" href="#">Notificacion #3</a></li>
-                        </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><i class="bi bi-grid-1x2-fill me-2"></i>Departamentos</a>

@@ -16,6 +16,13 @@ export class AccountviewComponent implements OnInit {
   ngOnInit(): void {
 
   }
+
+  view(){
+    let id = localStorage.getItem('view');
+    console.log('Este es el Id', id)
+    this.router.navigate(['accountview/profile/editprofile',id])
+  }
+
   logout(){
     localStorage.clear();
     const Toast = Swal.mixin({
