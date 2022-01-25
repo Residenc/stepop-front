@@ -7,10 +7,10 @@
             </div>
             <ul class="nav menu d-flex d-sm-block justify-content-center flex-wrap" id="myTab" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/accountview/home']" [routerLinkActive]="'active'"><i class="fas fa-home me-4" ></i><span>Inicio</span></a>
+                    <a class="nav-link" [routerLink]="['/accountview/home/',id]" [routerLinkActive]="'active'"><i class="fas fa-home me-4" ></i><span>Inicio</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/accountview/profile']" [routerLinkActive]="'active'"><i class="fas fa-address-card me-4"></i><span>Editar Información</span></a>
+                    <a class="nav-link" [routerLink]="['/accountview/editprofile/',id]" [routerLinkActive]="'active'"><i class="fas fa-address-card me-4"></i><span>Editar Información</span></a>
                 </li>
                 <!--
                 <li class="nav-item">

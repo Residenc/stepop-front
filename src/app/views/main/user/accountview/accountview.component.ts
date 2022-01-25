@@ -9,6 +9,7 @@ import Swal from 'sweetalert2';
 })
 
 export class AccountviewComponent implements OnInit {
+  id= 4;
   constructor(private router : Router) {
   }
 
