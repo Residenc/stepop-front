@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
-
+id=4;
 
   constructor(private router:Router) {
 

@@ -79,15 +79,15 @@ const routes: Routes = [
             component: EditprofileComponent
           },
           {
-            path: 'editaddress',
+            path: 'editaddress/:id',
             component: EditaddressComponent
           },
           {
-            path: 'editpays',
+            path: 'editpays/:id',
             component: EditpaysComponent
           },
           {
-            path: 'editsuscription',
+            path: 'editsuscription/:id',
             component: EditsuscriptionComponent
           }
         ]
@@ -101,15 +101,15 @@ const routes: Routes = [
         component: MessagesComponent
       },
       {
-        path: 'shoppinghistory',
+        path: 'shoppinghistory/:id',
         component: ShoppinghistoryComponent
       },
       {
-        path: 'products',
+        path: 'products/:id',
         component: ProductsComponent
       },
       {
-        path: 'saleshistory',
+        path: 'saleshistory/:id',
         component: SaleshistoryComponent
       },
       {
