@@ -21,6 +21,10 @@ export class ProductosService {
       return this.http.get(this.url +'/listaproduc');
     }
 
+    getUltimo(){
+      return this.http.get(this.url +'/productoimagen');
+    }
+
   //get productos
   getProductos(){
     return this.http.get(this.url +'/productos');

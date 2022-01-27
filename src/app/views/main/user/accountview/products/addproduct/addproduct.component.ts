@@ -13,6 +13,7 @@ import Swal from 'sweetalert2';
 })
 export class AddproductComponent implements OnInit {
   ListarProducto: Producto [ ] | any;
+  id_producto: any; 
   title = 'fileUpload';
   images: any = [];
   imgURL = '/assets/noimage.png';
@@ -55,17 +56,26 @@ public previsualizacion :string;
   }
 
   onSubmit() {
-
     this.agregar();
 
-  
-    const formData = new FormData();
-    //formData.append('files', this.prueba);
-    for (let x = 0; x < this.prueba.length; x++) {
-     formData.append('files', this.prueba[x])
-  
-    }
    
+
+    this.productService.getUltimo().subscribe(
+      res=>{
+        const formData = new FormData();
+        this.ListarProducto=<any>res;
+        for (let x = 0; x < this.prueba.length; x++) {
+          formData.append('files', this.prueba[x])
+         }
+ 
+      
+
+
+      console.log(formData)
+    
+    //formData.append('files', this.prueba);
+    
+
     this.http.post<any>('http://localhost:3000/file', formData).subscribe(
       (res) => console.log(res,  Swal.fire({
                 icon: 'success',
@@ -83,6 +93,9 @@ public previsualizacion :string;
                       text: 'Parece que no subio nada!!' 
                     })
     );
+  },
+  err => console.log(err)
+);
    this.imgURL = '/assets/noimage.png';
   
   
@@ -96,6 +109,17 @@ public previsualizacion :string;
     })
     }else{console.log('Not Valid')
     }
+    }
+
+    lastId(){
+      this.productService.getUltimo().subscribe(
+        res=>{
+          console.log(res);
+          this.ListarProducto=<any>res;
+          this.id_producto = this.ListarProducto
+        },
+        err => console.log(err)
+      );
     }
   
   mostrarImg(){
