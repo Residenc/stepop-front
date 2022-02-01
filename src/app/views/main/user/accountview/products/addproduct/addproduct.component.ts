@@ -76,7 +76,7 @@ public previsualizacion :string;
     //formData.append('files', this.prueba);
     
 
-    this.http.post<any>('http://localhost:3000/file', formData).subscribe(
+    this.http.post<any>('http://localhost:3000/products/file', formData).subscribe(
       (res) => console.log(res,  Swal.fire({
                 icon: 'success',
                 title: 'Imagen cargada!!',
@@ -124,7 +124,7 @@ public previsualizacion :string;
   
   mostrarImg(){
     
-    this.http.get<any>('http://localhost:3000/upload').subscribe(res => {
+    this.http.get<any>('http://localhost:3000/products/upload').subscribe(res => {
     
     this.imagenes = res;
     const reader = new FileReader();
@@ -144,7 +144,7 @@ public previsualizacion :string;
   confirmButtonText: `Eliminar`,
   }).then((result) => {
   if (result.isConfirmed) {
-      this.http.delete<any>(`http://localhost:3000/delete/${id}`).subscribe( res => {
+      this.http.delete<any>(`http://localhost:3000/products/delete/${id}`).subscribe( res => {
     
     console.log(res, location.reload());
 
