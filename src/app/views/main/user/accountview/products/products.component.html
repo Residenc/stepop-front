@@ -13,29 +13,17 @@
                     <table class="table table-borderless">
                         <thead>
                           <tr>
-                            <th scope="col">ID</th>
                             <th scope="col">Nombre</th>
-                            <th scope="col">Tipo</th>
-                            <th scope="col">Descripcion</th>
-                            <th scope="col">Precio</th>
-                            <th scope="col">Stock</th>
-                            <th scope="col">id_usuario</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <tr *ngFor="let usuario of ListarProducto">
-                            <th>{{usuario.id_produc}}</th>
-                            <td>{{usuario.nombre}}</td>
-                            <td>{{usuario.tipo}}</td>
-                            <td>{{usuario.descripcion}}</td>
-                            <td>${{usuario.precio}}.00 MXM</td>
-                            <td>{{usuario.stock}} </td>
-                            <td>{{usuario.id_usuario}}</td>
+                          <tr *ngFor="let imagen of this.imagenes">
+                            <td>{{imagen.nombre}}</td>
+                            <td><img class="card-img-top" src="http://localhost:3000/{{imagen.imagen}}" alt=""></td>
                             <td class="text-center bg-white">
-                                <button [routerLink]="['/editproduct',usuario.id_produc]" type="button" class="btn"><i class="bi bi-pencil-square icon-edit"></i></button>
                             </td>
                             <td class="text-center bg-white">
-                                <button (click)="eliminar(usuario.id_produc)" type="button" class="btn"><i class="bi bi-trash icon-drop"></i></button>
+                              
                             </td>
                           </tr>
                         </tbody>
