@@ -1,7 +1,9 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoadScriptsService } from 'src/app/services/load-scripts/load-scripts.service';
 import { Producto, ProductosService } from 'src/app/services/productos/productos.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-products',
@@ -9,12 +11,17 @@ import { Producto, ProductosService } from 'src/app/services/productos/productos
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
-
-    ListarProducto: Producto [ ] | any;
+  title = 'fileUpload';
+  images = '';
+  imgURL = '/assets/noimage.png';
+  multipleImages = [];
+  imagenes: any = [];
+ 
 
   constructor(
     private loadScripts:LoadScriptsService, 
     public productoService:ProductosService, 
+    private http: HttpClient,
     private router: Router) { 
     loadScripts.loadS(["tooltip"]);
     loadScripts.loadS(["checkdisplay_account"]);
@@ -25,29 +32,41 @@ export class ProductsComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.listarProducto();
+    this.mostrarImg();
+   
   }
-  listarProducto(){
-    this.productoService.getProductos().subscribe(
-      res=>{
-        console.log(res);
-        this.ListarProducto=<any>res;
-      },
-      err=> console.log(err)
-    )
-  }
-  eliminar(id_product:string )
-  {
-    try {
-      this.productoService.deleteProduc(id_product).subscribe(
-        res=>{
-          console.log('Producto eliminado');
-          this.listarProducto();
-        },
-        err=> console.log(err)
-        );
-    } catch (error) {
-      console.log(error)
-    }
+  mostrarImg(){
+    
+    this.http.get<any>('http://localhost:3000/upload').subscribe(res => {
+    
+    this.imagenes = res;
+    const reader = new FileReader();
+    reader.onload = (this.imagenes);
+       
+   console.log(this.imagenes);
+    });
 
-  }}
+  }
+
+  deleteImg (id: any){ 
+        
+    Swal.fire({
+   icon: 'info',
+     title: 'Desea eliminar la imagen?',
+   showCancelButton: true,
+  confirmButtonText: `Eliminar`,
+  }).then((result) => {
+  if (result.isConfirmed) {
+      this.http.delete<any>(`http://localhost:3000/delete/${id}`).subscribe( res => {
+    
+    console.log(res, location.reload());
+
+    });
+  }
+});
+  
+
+  }
+
+
+  }

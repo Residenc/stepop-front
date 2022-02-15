@@ -22,7 +22,7 @@ export class ProductosService {
     }
 
     getUltimo(){
-      return this.http.get(this.url +'/products/productoimagen');
+      return this.http.get(this.url +'/productoimagen');
     }
 
   //get productos
@@ -32,7 +32,7 @@ export class ProductosService {
   
   //add
   addProducto(producto:Producto){
-    return this.http.post(this.url+'/products/registroproductos',producto)
+    return this.http.post(this.url+'/registroproductos',producto)
   }
 
   //get un producto

@@ -105,7 +105,7 @@ const routes: Routes = [
         component: ShoppinghistoryComponent
       },
       {
-        path: 'products/:id',
+        path: 'products',
         component: ProductsComponent
       },
       {
